@@ -12,6 +12,7 @@ categories: [Algorithm]
 1、算法概念。
 
 快速排序（Quicksort）是对冒泡排序的一种改进。由C. A. R. Hoare在1962年提出。
+
 2、算法思想。
 
 通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
@@ -24,49 +25,48 @@ categories: [Algorithm]
 
 4.实现代码
 
-<pre lang="java">
-package com.young;
 
-public class QuickSort {
-	public static void quickSort(int[] array, int start, int end) {
-		int lower = start;
-		int higher = end;
-		if (end > start) {
-			int mid = array[(start + end) / 2];
-
-			while (lower <= higher) {
-				while ((lower++ < end) && (array[lower] < mid))
-					lower++;
-				while ((higher-- > start) && (array[higher] > mid))
-					higher--;
-				if (lower <= higher) {
-					swap(array, lower, higher);
-					lower++;
-					higher--;
+	
+	public class QuickSort {
+		public static void quickSort(int[] array, int start, int end) {
+			int lower = start;
+			int higher = end;
+			if (end > start) {
+				int mid = array[(start + end) / 2];
+	
+				while (lower <= higher) {
+					while ((lower++ < end) && (array[lower] < mid))
+						lower++;
+					while ((higher-- > start) && (array[higher] > mid))
+						higher--;
+					if (lower <= higher) {
+						swap(array, lower, higher);
+						lower++;
+						higher--;
+					}
+				}
+				if(start<higher){
+					quickSort(array, start, higher);
+				}
+				if(lower<end){
+					quickSort(array, lower, end);
 				}
 			}
-			if(start<higher){
-				quickSort(array, start, higher);
-			}
-			if(lower<end){
-				quickSort(array, lower, end);
+		}
+	
+		public static void swap(int[] array, int i, int j) {
+			int temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
+		}
+		
+		public static void main(String[] args) {
+			int[] array = {2,3,5,1,4,6,10,5,8};
+			quickSort(array, 0, array.length-1);
+			for (int i : array) {
+				System.out.print(i+"  ");
 			}
 		}
 	}
 
-	public static void swap(int[] array, int i, int j) {
-		int temp = array[i];
-		array[i] = array[j];
-		array[j] = temp;
-	}
-	
-	public static void main(String[] args) {
-		int[] array = {2,3,5,1,4,6,10,5,8};
-		quickSort(array, 0, array.length-1);
-		for (int i : array) {
-			System.out.print(i+"  ");
-		}
-	}
-}
-</pre>
 

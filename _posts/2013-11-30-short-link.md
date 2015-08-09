@@ -10,6 +10,7 @@ categories: [Algorithm]
 
 国内外有很多公司都提供了短链，比如微博，推特，还有各种网盘
 下面是几个例子：
+
 1.  <a href="http://url.cn/JIIcys ">url.cn/JIIcys </a>
 2.  <a href="http://t.cn/zHgLwAv" >t.cn/zHgLwAv</a>
 3.  <a href="http://t.cn/8kNQmsg" >t.cn/8kNQmsg</a>

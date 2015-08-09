@@ -13,77 +13,77 @@ categories: [Design Patterns]
 <a href="http://veryyoung.u.qiniudn.com/7niu_uml.png"><img src="http://veryyoung.u.qiniudn.com/7niu_uml.png" alt="" title="uml" width="500" height="304" class="alignnone size-medium wp-image-92" /></a>
 我解释下这些类的作用：SubjectClient类就是我们的主对象，Observer1和Observer2是依赖于AbstactSubject的对象，当AbstactSubject变化时，Observer1和Observer2必然变化。AbstractSubject类中定义着需要监控的对象列表，可以对其进行修改：增加或删除被监控对象，且当SubjectClient变化时，负责通知在列表内存在的对象。我们看实现代码：
 一个IObserver接口：
-<pre lang="java">
-public interface IObserver {
-    public void update();
-}
-</pre>
+
+	public interface IObserver {
+	    public void update();
+	}
+
 
 两个实现类：
-<pre lang="java">
-public class Observer1 implements IObserver {
 
-    @Override
-    public void update() {
-        System.out.println("observer1 has received");
-    }
-}
-</pre>
+	public class Observer1 implements IObserver {
+	
+	    @Override
+	    public void update() {
+	        System.out.println("observer1 has received");
+	    }
+	}
 
-<pre lang="java">
-public class Observer2 implements IObserver {
 
-    @Override
-    public void update() {
-        System.out.println("observer2 has received");
-    }
-}
-</pre>
+
+	public class Observer2 implements IObserver {
+	
+	    @Override
+	    public void update() {
+	        System.out.println("observer2 has received");
+	    }
+	}
+
 
 Subject接口及实现类：
-<pre lang="java">
-public interface Subject  {
-    public void add(IObserver observer);
-    public void delete(IObserver observer);
-    public void notifyObservers();
-    public void operation();
-}
-</pre>
 
-<pre lang="java">
-public class SubjectClient extends AbstractSubject {
-    @Override
-    public void operation() {
-        System.out.println("update self");
-        notifyObservers();
-    }
-}
-</pre>
+	public interface Subject  {
+	    public void add(IObserver observer);
+	    public void delete(IObserver observer);
+	    public void notifyObservers();
+	    public void operation();
+	}
 
 
-<pre lang="java">
-public class SubjectClient extends AbstractSubject {
-    @Override
-    public void operation() {
-        System.out.println("update self");
-        notifyObservers();
-    }
-}
-</pre>
+	public class SubjectClient extends AbstractSubject {
+	    @Override
+	    public void operation() {
+	        System.out.println("update self");
+	        notifyObservers();
+	    }
+	}
+
+
+
+
+	public class SubjectClient extends AbstractSubject {
+	    @Override
+	    public void operation() {
+	        System.out.println("update self");
+	        notifyObservers();
+	    }
+	}
+
 
 测试类：
-<pre lang="java">
-public class ObserverTest{
-    public static void main(String[] args){
-        Subject subject = new SubjectClient();
-        subject.add(new Observer1());
-        subject.add(new Observer2());
-        subject.operation();
-    }
-}
-</pre>
+
+	public class ObserverTest{
+	    public static void main(String[] args){
+	        Subject subject = new SubjectClient();
+	        subject.add(new Observer1());
+	        subject.add(new Observer2());
+	        subject.operation();
+	    }
+	}
+
 
 输出：
-update self!
-observer1 has received!
-observer2 has received!
+
+	update self!
+	observer1 has received!
+	observer2 has received!
