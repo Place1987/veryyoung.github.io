@@ -8,7 +8,9 @@ categories: [Java]
 ---
 Lock是java.util.concurrent.locks包下的接口。
 
+
 Lock 实现提供了比使用synchronized 方法和语句可获得的更广泛的锁定操作，它能以更优雅的方式处理线程同步问题。
+
 
 锁像synchronized同步块一样，是一种线程同步机制，但比Java中的synchronized同步块更复杂。因为锁（以及其它更高级的线程同步机制）是由synchronized同步块的方式实现的，所以我们还不能完全摆脱synchronized关键字（这说的是Java 5之前的情况）。
 

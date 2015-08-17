@@ -11,6 +11,7 @@ GoAgent抽风厉害，而且速度太不理想。
 Baidu搜索结果充斥着广告和垃圾，完全不能看！！！
 
 Google了一番，收集下Google的代替方案，有钱买vpn的土豪和能忍受baidu的忽略。
+
 1.<a href="http://www.aol.com/" title="http://www.aol.com/" target="_blank">http://www.aol.com/</a>
 美国在线，集成了Google搜索引擎，大赞！
 

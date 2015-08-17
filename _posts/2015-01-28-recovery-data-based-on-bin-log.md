@@ -6,7 +6,9 @@ author: VERYYOUNG
 comments: true
 categories: [Database]
 ---
+
 N久之前的一个遗留sql，今天一个同事用上了
+
 一条update语句，漏了where语句，直接全表更新，花了一张表.....
 
 
@@ -21,7 +23,8 @@ mysql如果开启了bin-log的功能，可找出bin-log，基于bin-log用mysqlb
 
 大致用法如下
 
-[java]mysqlbinlog --start-date=&quot;&quot; --stop-date=&quot;&quot; mysql_binglog.00001 &gt; back.sql[/java]
+	mysqlbinlog --start-date="" --stop-date= "" mysql_binglog.00001 >  back.sql
+
 
 执行该命令能得到start-date 到 stop-date之间的所有sql语句
 
@@ -44,7 +47,10 @@ mysql如果开启了bin-log的功能，可找出bin-log，基于bin-log用mysqlb
 
 【开启bin-log】
 找到my.cnf（一般在/etc/mysql/my.cnf）在mysqld结点下新增 
-[java]log-bin=/etc/mysql/binlog[/java]后面的路径自由发挥
+
+	log-bin=/etc/mysql/binlog
+
+后面的路径自由发挥
 配置完毕重启mysql，bin-log就生效了。
 
 
