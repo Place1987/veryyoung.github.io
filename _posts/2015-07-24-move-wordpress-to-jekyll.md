@@ -30,6 +30,21 @@ WordPress自带导出功能，可以把文章导出成xml文件。![](http://ww4
 2.安装Jekyll<br>
 JekyllBootstrap官网有个[jekyll-quick-start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html "jekyll-quick-start")，对着上面走一遍，就Ok了，中间涉及到github的一些操作，ruby的安装之类的...
 
+在我大天朝网络状况不太好，会
+
+	λ gem install jekyll
+ERROR:  While executing gem ... (Gem::RemoteFetcher::FetchError)
+    Errno::ECONNABORTED: An established connection was aborted by the software in your host machine. - SSL_connect (https://api.rubygems.org/quick/Marshal.4.8/jekyll-2.5.3.gemspec.rz)
+
+最好把ruby的源换成taobao的
+	
+	λ gem sources --remove https://rubygems.org/
+	https://rubygems.org/ removed from sources
+	D:\Ruby22-x64\dev-tool
+	λ gem sources -a https://ruby.taobao.org/
+	https://ruby.taobao.org/ added to sources
+
+
 
 3.放入博文<br>
 将第一步得到的md放入到_posts文件夹下，git push
