@@ -25,6 +25,9 @@ DuckDuckGo 是一个新兴的搜索引擎，承诺绝不收集用户的任何数
 4.<a href="http://cn.bing.com/" title="http://cn.bing.com/" target="_blank">http://cn.bing.com/</a>
 如果你非觉得百度很好，试试bing吧，去除广告，少点垃圾，中文搜索结果不错...
 
-推荐使用AOL..
+5.<a href="https://www.yahoo.com/" title="https://www.yahoo.com/" target="_blank">https://www.yahoo.com/</a>
+据说雅虎也不错哦！
+
+推荐使用AOL，设置成chrome默认搜索引擎
 
 搜狗 360 搜索不在讨论范围之内....
