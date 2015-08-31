@@ -15,7 +15,7 @@ categories: [Java]
 
 在线上服务器上去vi是一件特别麻烦的事情。
 
-maven提供了配置文件管理方案：[maven profilel](http://maven.apache.org/guides/introduction/introduction-to-profiles.html)。
+maven提供了配置文件管理方案：[maven profile](http://maven.apache.org/guides/introduction/introduction-to-profiles.html)。
 
 maven profile可以根据情况去读取不同的配置，来实现配置管理的功能。
 
