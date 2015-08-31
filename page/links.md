@@ -21,7 +21,7 @@ comments: true
 ##From My Blog
 - [IDEA常用配制和插件](/blog/2015/07/17/idea-common-config-and-plugins.html)
 - [Google Search替代方案](/blog/2014/08/08/google-alternative.html)
-
+- [Chrome 插件推荐](/blog/2015/08/31/chrome-plugins.html)
 
 
 
