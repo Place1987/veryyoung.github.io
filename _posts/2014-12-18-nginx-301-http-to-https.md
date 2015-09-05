@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nginx跳转任意http请求到https
+title: Nginx跳转任意Http请求到Https
 date: 2014-12-18 22:59
 author: VERYYOUNG
 comments: true

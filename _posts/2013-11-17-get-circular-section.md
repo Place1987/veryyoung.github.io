@@ -1,6 +1,6 @@
 ---
 layout: post
-title: sogou笔试题之求无限循环小数循环节
+title: Sogou笔试题之求无限循环小数循环节
 date: 2013-11-17 00:34
 author: VERYYOUNG
 comments: true

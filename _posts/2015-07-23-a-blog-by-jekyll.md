@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 来自jekyll的一篇文章
+title: 来自Jekyll的一篇文章
 date: 2015-07-23 13:43
 author: VERYYOUNG
 comments: true

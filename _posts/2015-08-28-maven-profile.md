@@ -1,6 +1,6 @@
 ---
 layout: post
-title: maven profile分环境打包
+title: Maven Profile分环境打包
 date: 2015-8-28 21:10:28
 author: VERYYOUNG
 comments: true
@@ -15,9 +15,13 @@ categories: [Java]
 
 在线上服务器上去vi是一件特别麻烦的事情。
 
+<!-- more -->
+
 maven提供了配置文件管理方案：[maven profile](http://maven.apache.org/guides/introduction/introduction-to-profiles.html)。
 
 maven profile可以根据情况去读取不同的配置，来实现配置管理的功能。
+
+
 
 加入有 dev、qa、product 等几种类别的配置文件，需要在resource目录新建这三个文件夹，分别放入配置文件。
 

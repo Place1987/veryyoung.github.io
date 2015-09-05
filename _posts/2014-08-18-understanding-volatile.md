@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 理解volatile
+title: 理解Volatile
 date: 2014-08-18 17:59
 author: VERYYOUNG
 comments: true

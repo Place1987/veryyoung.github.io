@@ -1,6 +1,6 @@
 ---
 layout: post
-title: tomcat分布式session共享
+title: Tomcat分布式Session共享
 date: 2015-07-20 13:43
 author: VERYYOUNG
 comments: true

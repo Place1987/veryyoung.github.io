@@ -1,15 +1,15 @@
 ---
 layout: post
-title: 忘记mysql密码
+title: 忘记MySQL密码
 date: 2014-11-18 15:30
 author: VERYYOUNG
 comments: true
 categories: [Database]
 ---
 
-mysql密码忘记了，各种google，终于重置了，在这里记录下。
+MySQL密码忘记了，各种google，终于重置了，在这里记录下。
 
-1.停止mysql 
+1.停止MySQL
 
 	 service mysqld stop
 
@@ -45,12 +45,12 @@ mysql密码忘记了，各种google，终于重置了，在这里记录下。
 	"/etc/my.cnf" 47L, 1160C
 
 
-3.重启mysql  
+3.重启MySQL  
 	
 	service mysqld start
 
 
-4.登陆mysql  
+4.登陆MySQL 
 
 	mysql -uroot 
 
@@ -70,6 +70,6 @@ mysql密码忘记了，各种google，终于重置了，在这里记录下。
 6.修改/etc/my.cnf 回之前的模样
 
 
-7.重启Mysql
+7.重启MySQL
 
 	serivce mysqld restart

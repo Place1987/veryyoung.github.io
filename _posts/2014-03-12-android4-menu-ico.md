@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 解决android4.0系统中菜单(Menu)添加Icon无效问题
+title: 解决Android4.0系统中菜单(Menu)添加Icon无效问题
 date: 2014-03-12 15:54
 author: VERYYOUNG
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 一条大sql还是多条小sql
+title: 一条大Sql还是多条小Sql
 date: 2015-8-21 16:38:15
 author: VERYYOUNG
 comments: true
@@ -14,6 +14,8 @@ categories: [Database]
 
 1. 一条大sql直接搞定
 2. 把大sql拆分成多条小sql，在程序代码里面再组装对象
+
+<!-- more -->
 
 
 下面分别分析下各自的优缺点：

@@ -134,7 +134,7 @@ name表示服务的名字可以自己随便定义，serviceClass指明服务接�
 
 7.跨语言编写客户端
 
-前面编写的客户端采用的是java语言，与Service采用的是同一个JVM，无法直观的体会出webservice跨平台跨语言的特性
+前面编写的客户端采用的是Java语言，与service采用的是同一个JVM，无法直观的体会出webservice跨平台跨语言的特性
 下面采用c#编写客户端
 打开Visual Studio，新建一个c# console project，命名为wsclient，添加引用，选择添加web引用，输入http://localhost:8080/webservice/services/CalculatorService?wsdl
 给该引用命名为CalculatorService

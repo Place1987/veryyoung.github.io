@@ -1,6 +1,6 @@
 ---
 layout: post
-title: http状态码301和302的区别
+title: Http状态码301和302的区别
 date: 2015-8-24 22:08:14
 author: VERYYOUNG
 comments: true
@@ -8,6 +8,8 @@ categories: [Http]
 ---
 
 301和302都是重定向，他们之间有什么区别呢？
+
+<!-- more -->
 
 先看看wiki [http状态码](https://zh.wikipedia.org/zh/HTTP%E7%8A%B6%E6%80%81%E7%A0%81)的解释。
 
