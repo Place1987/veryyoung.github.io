@@ -4,7 +4,7 @@ title: Google的代替方案
 date: 2014-08-08 16:35
 author: VERYYOUNG
 comments: true
-categories: [Uncategorized]
+categories: [Others]
 ---
 GFW最近好猖狂，不翻墙完全没法用了！
 GoAgent抽风厉害，而且速度太不理想。

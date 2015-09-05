@@ -4,7 +4,7 @@ title: Nginx得到反向代理前的真实IP
 date: 2015-02-26 16:14
 author: VERYYOUNG
 comments: true
-categories: [HTTP]
+categories: [Web Server]
 ---
 <h3>Nginx得到反向代理前的真实IP</h3>
 

@@ -4,7 +4,7 @@ title: IE解释Content-Type
 date: 2014-08-14 17:54
 author: VERYYOUNG
 comments: true
-categories: [Uncategorized]
+categories: [Front End]
 ---
 
 做客户的一个专题，四个静态页面。

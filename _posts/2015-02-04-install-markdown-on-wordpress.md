@@ -4,7 +4,7 @@ title: Install MarkDown On Wordpress
 date: 2015-02-04 23:44
 author: VERYYOUNG
 comments: true
-categories: [Uncategorized]
+categories: [Blog]
 ---
 <p>今天突然想用markdown写博文，这样应该会方便不少。</p>
 

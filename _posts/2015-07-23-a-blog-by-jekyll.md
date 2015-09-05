@@ -4,7 +4,7 @@ title: 来自jekyll的一篇文章
 date: 2015-07-23 13:43
 author: VERYYOUNG
 comments: true
-categories: [Uncategorized]
+categories: [Blog]
 ---
 
 <h1>This is a blog by jekyll</h1>

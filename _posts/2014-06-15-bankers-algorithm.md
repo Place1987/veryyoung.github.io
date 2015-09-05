@@ -4,7 +4,7 @@ title: 银行家算法
 date: 2014-06-15 21:38
 author: VERYYOUNG
 comments: true
-categories: [Uncategorized]
+categories: [Algorithm]
 ---
 
 一．实验名称：银行家算法

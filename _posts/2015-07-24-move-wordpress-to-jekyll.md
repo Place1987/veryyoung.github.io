@@ -4,7 +4,7 @@ title: 把WordPress迁移到Jekyll
 date: 2015-7-24 10:27:21
 author: VERYYOUNG
 comments: true
-categories: [Uncategorized]
+categories: [Blog]
 ---
 #把WordPress迁移到Jekyll
 

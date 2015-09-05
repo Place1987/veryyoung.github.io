@@ -4,7 +4,7 @@ title: 使用 JavaScript 修改浏览器 URL 地址栏
 date: 2013-10-18 20:48
 author: VERYYOUNG
 comments: true
-categories: [JavaScript]
+categories: [Front End]
 ---
 <h3>现在的浏览器里,有一个十分有趣的功能</h3>
 

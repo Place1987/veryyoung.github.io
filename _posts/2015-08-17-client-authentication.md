@@ -4,7 +4,7 @@ title: 客户端身份认证
 date: 2015-8-17 17:17:02
 author: VERYYOUNG
 comments: true
-categories: [Uncategorized]
+categories: [Http]
 ---
 
 浏览器端有cookie这个概念，能够很方面的保存客户端的状态，在cookie中保存sessionId，在客户端每次请求的时候都把这个sessionId带上，去和服务端的session对比，如果能匹配，则验证通过，返回登录状态下应该返回的页面。

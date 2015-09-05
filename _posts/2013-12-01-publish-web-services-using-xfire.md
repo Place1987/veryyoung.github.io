@@ -4,7 +4,7 @@ title: XFire发布Web Services
 date: 2013-12-01 17:07
 author: VERYYOUNG
 comments: true
-categories: [Web Service]
+categories: [Java]
 ---
 最近在学习web services，网上先关的资料不多，讲的都是很基础，例子也很简单，自己动手敲了敲在这里和大家分享一下，希望能对初学者有所帮助。
 

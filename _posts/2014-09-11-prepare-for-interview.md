@@ -4,7 +4,7 @@ title: 面试准备资料
 date: 2014-09-11 23:02
 author: VERYYOUNG
 comments: true
-categories: [Uncategorized]
+categories: [Others]
 ---
 
 书籍整理：
