@@ -57,7 +57,7 @@ $(document).ready(function() {
 
 
     $('#load-disqus').click(function(){
-		var disqus_shortname = 'veryyoungyoung';
+		var disqus_shortname = 'veryyoung';
 		$.ajaxSetup({ cache: true });
 		$.getScript(
 	        'http://' + disqus_shortname + '.disqus.com/embed.js',
