@@ -8,8 +8,9 @@
 
 $('#load-disqus').click(function(){
 	var disqus_shortname = 'veryyoungyoung';
+	$.ajaxSetup({async:true});
 	$.getScript(
-        'https://' + disqus_shortname + '.disqus.com/embed.js',
+        'http://' + disqus_shortname + '.disqus.com/embed.js',
         function(){
         	$('#load-disqus').remove()
         }

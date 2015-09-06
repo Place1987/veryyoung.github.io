@@ -54,5 +54,18 @@ $(document).ready(function() {
         fade: 1500,
         duration: 15000,
     })
+
+
+    $('#load-disqus').click(function(){
+		var disqus_shortname = 'veryyoungyoung';
+		$.ajaxSetup({ cache: true });
+		$.getScript(
+	        'http://' + disqus_shortname + '.disqus.com/embed.js',
+	        function(){
+	        	$('#load-disqus').remove()
+	        }
+    );
+})
+
 });
 
