@@ -332,9 +332,6 @@ a.pagination-item:hover {
 .pagination-item:last-child {
 	float:right;
 }
-.share {
-	margin:25px 0 25px 1px;
-}
 footer {
 	font-size:16px;
 	line-height:1.5;
@@ -347,21 +344,8 @@ footer {
 .ds-powered-by {
 	font-size:0px !important;
 }
-#ds-reset .ds-avatar img {
-	transition:transform 0.7s ease-out;
-	-webkit-transition:-webkit-transform 0.7s ease-out;
-	-moz-transition:-moz-transform 0.7s ease-out;
-	-o-transition:-moz-transform 0.7s ease-out;
-}
-#ds-reset .ds-avatar img:hover {
-	transform:rotateZ(360deg);
-	-webkit-transform:rotateZ(360deg);
-	-moz-transform:rotateZ(360deg);
-	-o-transform:rotateZ(360deg);
-}
-.bdshare_dialog_bottom {
-	display:none;
-}
+
+
 .post-main {
 	color:#525d67;
 	font-size:18px;
@@ -648,12 +632,6 @@ pre code {
 	.pagination-item {
 		padding:8px 20px;
 	}
-	.share {
-		margin:-5px 0 15px 1px;
-	}
-	.comments {
-		margin:70px 0 -110px 0;
-	}
 	footer {
 		margin-top:6em;
 	}
@@ -683,9 +661,6 @@ pre code {
 		margin-top:-1px;
 		border-bottom-left-radius:5px;
 		border-bottom-right-radius:5px;
-	}
-	.share {
-		margin:-10px 0 10px 1px;
 	}
 
 	footer {
