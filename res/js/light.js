@@ -62,7 +62,7 @@ $(document).ready(function() {
 		$.getScript(
 	        'http://' + disqus_shortname + '.disqus.com/embed.js',
 	        function(){
-	        	$('#load-disqus').remove()
+	        	$(this).remove()
 	        }
     );
 })
