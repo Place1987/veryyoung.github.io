@@ -8,12 +8,11 @@
 
 $('#load-disqus').click(function(){
 	var disqus_shortname = 'veryyoungyoung';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        $('#load-disqus').remove();
-    })();
-
+	$.getScript(
+        'https://' + disqus_shortname + '.disqus.com/embed.js',
+        function(){
+        	$('#load-disqus').remove()
+        }
+    );
 })
 </script>
