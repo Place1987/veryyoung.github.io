@@ -118,7 +118,11 @@ LastPass插件帮你记住网站的登录帐户和密码，等你登录时就可
 
 Lantern是一个免费的桌面程序。它能帮助你随时随地快速、可靠、安全地访问互联网。
 
+##17.[HTTPS Everywhere](https://www.eff.org/HTTPS-EVERYWHERE)
 
+https会对信息加密，保护到用户的隐私，避免钓鱼等。
+
+HTTPS Everywhere会将带有http链接重定向到https（如果有）链接。
 
 
 
