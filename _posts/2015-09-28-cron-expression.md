@@ -6,7 +6,7 @@ author: VERYYOUNG
 comments: true
 categories: [Java]
 ---
-上篇文字提到了 Java 的各种定时任务的实现，很多都使用了 cron 表达式，这里记录几种常见设置方式，方便对照使用。
+[上篇文章](/blog/2015/09/28/java-schedule-task.html)提到了 Java 的各种定时任务的实现，很多都使用了 cron 表达式，这里记录几种常见设置方式，方便对照使用。
 
 <!-- more -->
 
