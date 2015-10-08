@@ -281,7 +281,7 @@ else 的前面两行判断是否连接匹配到了，我这里 controller 上面
 
 这么复杂的三目表达式嵌套你还不如搞成一长串的 if else 呢！
 
-由于上面两个都没匹配到，所以 return 可以简化成
+由于上面两个都没匹配到，舍弃前面部分，所以 return 可以简化成
 
 	return pattern1EqualsPath?-1:(pattern2EqualsPath?1:(info1.isPrefixPattern() && info2.getDoubleWildcards() == 0?1:(info2.isPrefixPattern() && info1.getDoubleWildcards() == 0?-1:(info1.getTotalCount() != info2.getTotalCount()?info1.getTotalCount() - info2.getTotalCount():(info1.getLength() != info2.getLength()?info2.getLength() - info1.getLength():(info1.getSingleWildcards() < info2.getSingleWildcards()?-1:(info2.getSingleWildcards() < info1.getSingleWildcards()?1:(info1.getUriVars() < info2.getUriVars()?-1:(info2.getUriVars() < info1.getUriVars()?1:0)))))))));
 	
@@ -303,7 +303,35 @@ else 的前面两行判断是否连接匹配到了，我这里 controller 上面
 分别解释下每个方法的作用以及返回值。
 
 
-| 方法                 |作用                       |返回值 info1、info2   |
+
+
+| 方法                  |作用                            |返回值 info1(//{username})、info2(//c)  |
 | --------------------- |:-----------------------------:|----------------:| 
-|秒                     | 0-59                          | , - * /         |
-|分                     | 0-59                          | , - * /         |
+| isPrefixPattern       | 判断 pattern 是否以 /** 结尾   |   false、false  |
+| getDoubleWildcards    | pattern 匹配到 ** 的个数       |   0、0  		|
+| getSingleWildcards    | pattern 匹配到 单个 * 的个数   |   0、0          |
+| getUriVars            | pattern 匹配到 { 的个数        |   1、0     |
+| getTotalCount         | pattern 匹配到 url 符号的个数：uriVars + singleWildcards + 2 * doubleWildcards   |   1、0     |
+| getLength             | pattern string 中的字符个数 （{username}算一个字符）   |   null（没执行到，如果执行到了也会是3）、3    |
+
+
+继续化简
+
+	return info2.isPrefixPattern() && info1.getDoubleWildcards() == 0?-1:(info1.getTotalCount() != info2.getTotalCount()?info1.getTotalCount() - info2.getTotalCount():(info1.getLength() != info2.getLength()?info2.getLength() - info1.getLength():(info1.getSingleWildcards() < info2.getSingleWildcards()?-1:(info2.getSingleWildcards() < info1.getSingleWildcards()?1:(info1.getUriVars() < info2.getUriVars()?-1:(info2.getUriVars() < info1.getUriVars()?1:0))))));
+	
+	return info1.getTotalCount() != info2.getTotalCount()?info1.getTotalCount() - info2.getTotalCount():(info1.getLength() != info2.getLength()?info2.getLength() - info1.getLength():(info1.getSingleWildcards() < info2.getSingleWildcards()?-1:(info2.getSingleWildcards() < info1.getSingleWildcards()?1:(info1.getUriVars() < info2.getUriVars()?-1:(info2.getUriVars() < info1.getUriVars()?1:0)))));
+	
+info1.getTotalCount() != info2.getTotalCount() ，三目表达式前面的条件终于匹配到了，舍去后面部分：
+	
+	return info1.getTotalCount() - info2.getTotalCount();
+	
+	
+最终的结果返回 1 啦！！！
+
+返回 1，从小到大排，所以 选择 //c，而不是 //{username}
+
+回到 RequestMappingInfo 的 compareTo 方法，一路往上回到 AbstractHandlerMethodMapping 的 lookupHandlerMethod 方法。
+
+排完序了，最后选择到的成了 c 方法，而不是 username 方法。
+
+-------
