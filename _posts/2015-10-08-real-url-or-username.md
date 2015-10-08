@@ -137,11 +137,28 @@ lookupHandlerMethod 方法调用 addMatchingMappings 找到能匹配上的 handl
 
 ![](http://veryyoung.u.qiniudn.com/20151008145954.png)	
 
+
+
+然后程序走到下面，根据某些策略给这两个 “matches” 排序，取第一个作为 “bestMatch”
+
 ![](http://veryyoung.u.qiniudn.com/20151008151250.png)	
 
-然后程序走到这里，根据某些策略给这两个 “matches” 排序，取第一个作为 “bestMatch”，然后找到对应的方法去响应。
+如果有多个 “matches” ，取第二个作为 “secondBestMatch”，如果 bestMatch 和 secondBestMatch 是一样的，会抛出旨意不明的异常。
 
-![](http://veryyoung.u.qiniudn.com/20151008151258.png)	
+	AbstractHandlerMethodMapping.Match bestMatch = (AbstractHandlerMethodMapping.Match)matches.get(0);
+	if(matches.size() > 1) {
+		AbstractHandlerMethodMapping.Match secondBestMatch = (AbstractHandlerMethodMapping.Match)matches.get(1);
+		if(comparator.compare(bestMatch, secondBestMatch) == 0) {
+			 Method m1 = bestMatch.handlerMethod.getMethod();
+			 Method m2 = secondBestMatch.handlerMethod.getMethod();
+			 throw new IllegalStateException("Ambiguous handler methods mapped for HTTP path \'" + request.getRequestURL() + "\': {" + m1 + ", " + m2 + "}");
+			 }
+	}
+
+
+
+根据 bestMatch 找到对应的方法去响应。
+
 
 我这里最后选择到的方法是 c 方法。
 
@@ -328,10 +345,53 @@ info1.getTotalCount() != info2.getTotalCount() ，三目表达式前面的条件
 	
 最终的结果返回 1 啦！！！
 
-返回 1，从小到大排，所以 选择 //c，而不是 //{username}
+返回 1，从小到大排，排序结果如下：
+
+![](http://veryyoung.u.qiniudn.com/20151008151258.png)	
+
+
+所以 选择 //c，而不是 //{username}
 
 回到 RequestMappingInfo 的 compareTo 方法，一路往上回到 AbstractHandlerMethodMapping 的 lookupHandlerMethod 方法。
 
 排完序了，最后选择到的成了 c 方法，而不是 username 方法。
 
--------
+##结论：SpringMVC 会优先匹配完全匹配到的 url，如果没匹配到，会根据 getTotalCount 函数的返回值，也就是 pattern 匹配到 url 符号的个数：uriVars + singleWildcards + 2 * doubleWildcards，去选择，越小越优先选取。
+
+##也就是会找到尽量简单的方法，并且固定的 requestMapping 会比带 PathVariable 的优先考虑。
+
+
+
+<br>
+<br>
+
+回来再请求下 /a，排序的时候只有一个东东，那第一个东东就是 bestMatch 咯，也就会直接找到 //{username}。
+
+
+
+
+
+------
+
+
+还有一个问题就是，万一哪个用户名叫 "c", SpingMVC 优先选择链接而不是用户名，那这个用户的界面岂不是没法进入了？
+
+看看 GitHub 是怎么做的。
+
+![](http://veryyoung.u.qiniudn.com/20151008200857.png)	
+
+![](http://veryyoung.u.qiniudn.com/20151008200906.png)	
+
+
+很显然，GitHub 维护了一个链接的列表，不让对应链接的用户名被注册到。
+
+所以在设置之初得想好哪些链接是需要用的，他维护起来。
+
+-----
+
+其实最简单的方案就是在用户名前面再加个东东，比如 /u/{username}，这样就能永远不冲突啦！
+
+[Coding](https://coding.net/) 就是这样做的。  
+
+比如 [https://coding.net/about](https://coding.net/about) 是关于 Coding 网站的一些介绍，而 [https://coding.net/u/about](https://coding.net/u/about)  则是一个用户的主页。
+
