@@ -138,6 +138,7 @@ lookupHandlerMethod 方法调用 addMatchingMappings 找到能匹配上的 handl
 ![](http://veryyoung.u.qiniudn.com/20151008145954.png)	
 
 
+注意，这里的 directPathMatches 是 null，代表没有能直接匹配上的。
 
 然后程序走到下面，根据某些策略给这两个 “matches” 排序，取第一个作为 “bestMatch”
 
@@ -155,8 +156,12 @@ lookupHandlerMethod 方法调用 addMatchingMappings 找到能匹配上的 handl
 			 }
 	}
 
+*事实上这也不太可能发生，因为在应用启动扫描 mapping 的时候就会检查，如果存在重复会抛出异常 *
 
-
+	Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping found. Cannot map 'homeController' bean method 
+	
+	
+<br>
 根据 bestMatch 找到对应的方法去响应。
 
 
@@ -356,18 +361,51 @@ info1.getTotalCount() != info2.getTotalCount() ，三目表达式前面的条件
 
 排完序了，最后选择到的成了 c 方法，而不是 username 方法。
 
-##结论：SpringMVC 会优先匹配完全匹配到的 url，如果没匹配到，会根据 getTotalCount 函数的返回值，也就是 pattern 匹配到 url 符号的个数：uriVars + singleWildcards + 2 * doubleWildcards，去选择，越小越优先选取。
 
-##也就是会找到尽量简单的方法，并且固定的 requestMapping 会比带 PathVariable 的优先考虑。
-
-
-
-<br>
-<br>
 
 回来再请求下 /a，排序的时候只有一个东东，那第一个东东就是 bestMatch 咯，也就会直接找到 //{username}。
 
 
+
+------
+
+将 controller 上的注解
+
+	@RequestMapping("/") 
+	
+改为
+
+	@RequestMapping("") 
+	
+或者直接去掉，以前的 mapping 前面会少个斜杠，会变为 /c 和 /{username}
+
+
+看看比较的效果。
+
+![](http://veryyoung.u.qiniudn.com/20151009095659.png)
+
+这次 matches 的 size 是 1了， directPathMatches 不再是 null 了，而是 /c  !!!
+
+意思就是一下子直接找到了，上面的排序都不用了！
+
+
+------
+
+**结论：SpringMVC 会优先匹配完全匹配到的 url，如果没匹配到，会根据 getTotalCount 函数的返回值，也就是 pattern 匹配到 url 符号的个数：uriVars + singleWildcards + 2 * doubleWildcards，去选择，越小越优先选取。**
+
+** 也就是会找到尽量简单的方法，并且固定的 requestMapping 会比带 PathVariable 的优先考虑。**
+
+** 同时建议在编码的时候要避免 path 出现 双斜杠的现象，如果没能直接匹配上，后面那么长的逻辑，效率肯定会差很多，而且万一有 bug 呢？**
+
+
+
+
+
+
+
+
+<br>
+<br>
 
 
 
