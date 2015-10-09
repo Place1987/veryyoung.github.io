@@ -32,7 +32,14 @@ Chrome、Firefox 浏览器默认会请求 link 的 href 所对应的图标，如
 1.  配置根目录能访问到的 favicon.ico
 2.  尽量在每个页面 link href favicon.ico
 3.  如果你的网站带端口，那么尤其要注意360等浏览器，它们在请求 favicon.ico 的时候会忽略端口号的。
-4.  最好用 nginx 代理 /favicon.ico，设置一个比较长的过期时间，同时不打印访问 ico 相关的日志。
+4.  在 SpringMVC 可以在 webapp 目录下放置一个 favicon.ico， 然后在 web.xml 中配置
+        
+        <servlet-mapping>
+                <servlet-name>default</servlet-name>
+                <url-pattern>/favicon.ico</url-pattern>
+         </servlet-mapping>
+    
+5.  最好用 nginx 代理 /favicon.ico，设置一个比较长的过期时间，同时不打印访问 ico 相关的日志。
 
         location /favicon.ico {  
             root /data/asserts/;  
