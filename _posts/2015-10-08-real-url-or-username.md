@@ -388,14 +388,20 @@ info1.getTotalCount() != info2.getTotalCount() ，三目表达式前面的条件
 
 意思就是一下子直接找到了，上面的排序都不用了！
 
+按道理这种情况下应该也需要 directMatche 到，因为请求来的 uri 会被过滤掉前面的多个斜杠
+
+比如 uri 为 ////c 的请求，lookupPath 的值 为 /c ，而 HandlerMethod 为 //c 与它是匹配不上的。
+
+btw， 我已经发了一个 pr 让 HandlerMethod 也过滤掉前面的重复的斜杠了！！
+
 
 ------
 
 **结论：SpringMVC 会优先匹配完全匹配到的 url，如果没匹配到，会根据 getTotalCount 函数的返回值，也就是 pattern 匹配到 url 符号的个数：uriVars + singleWildcards + 2 * doubleWildcards，去选择，越小越优先选取。**
 
-** 也就是会找到尽量简单的方法，并且固定的 requestMapping 会比带 PathVariable 的优先考虑。**
+**也就是会找到尽量简单的方法，并且固定的 requestMapping 会比带 PathVariable 的优先考虑。**
 
-** 同时建议在编码的时候要避免 path 出现 双斜杠的现象，如果没能直接匹配上，后面那么长的逻辑，效率肯定会差很多，而且万一有 bug 呢？**
+**同时建议在编码的时候要避免 path 出现 双斜杠的现象，如果没能直接匹配上，后面那么长的逻辑，效率肯定会差很多，而且万一有 bug 呢？**
 
 
 
