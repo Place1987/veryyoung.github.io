@@ -7,9 +7,10 @@ comments: true
 categories: [Java]
 ---
 
-Java 程序员比较烦的一件事情之一就是要写大量的 set、get、toString 等方法。
+Java 程序员比较烦的一件事情之一就是要写大量的样板代码。
 
-大部分情况下这些方法都不涉及到业务逻辑，都非常的简单。
+
+所谓样板代码，是那些没有营养，却又不得不写的代码，写的时候觉得毫无技术含量，依样画葫芦，比如一个类的全参构造函数、无参构造函数、get/set方法、toString方法等等。
 
 虽然 IDE 可以自动生成，但每次更改字段又得重新生成，不够优雅！
 
@@ -118,6 +119,29 @@ Java 程序员比较烦的一件事情之一就是要写大量的 set、get、to
 			
 			
 			
----
+----
 
 是不是有一种写动态语言的优雅的感觉？					
+
+----
+
+有的同学可能会担心 Lombok 的性能问题。
+
+Lombok 的原理并不是通过字节码类库如 cglib、asm 去增强字节码的，而是使用对抽象语法树 AST 的转换增强字节码(.class文件)的。
+
+不是在执行时决定行为，而是在编译时生成了代码，性能和你手写的一样！！
+
+关于 AST 的官方文档 [http://openjdk.java.net/groups/compiler/doc/compilation-overview/index.html](http://openjdk.java.net/groups/compiler/doc/compilation-overview/index.html)
+
+
+还有国人整理的注解相关的文档 [Java深度历险（六）——Java注解](http://www.infoq.com/cn/articles/cf-java-annotation)
+
+
+
+----
+
+PS：Lombok 对 IDE 提供了很好的支持，调试的时候毫无感知，就像自己手写了那部分样板代码一样！
+
+----
+
+建议所有的 Java 项目都用上这个“黑科技”。
