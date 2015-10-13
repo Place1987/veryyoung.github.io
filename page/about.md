@@ -25,7 +25,7 @@ I'm veryyoung， 来自湖北的一个小城市: 天门。
 
 ##Coding
 
-主要使用语言是Java，也用过一点Groovy、PHP、Python、Shell。
+主要使用语言是 Java，也用过一点 Groovy、PHP、Python、Shell。
 
 能写安卓程序，略懂前端，服务器也玩得还行。
 
@@ -35,9 +35,9 @@ I'm veryyoung， 来自湖北的一个小城市: 天门。
 
 重度强迫症，项目里面有不好的地方总想重构掉，不然会觉得很难受。
 
-搜索只用Google，浏览器只用Chrome，找编码问题喜欢上Stackoverflow。
+搜索只用 Google，浏览器只用 Chrome，找编码问题喜欢上 Stackoverflow。
 
-喜欢Geek的工作氛围和Geek的社区。
+喜欢 Geek 的工作氛围和 Geek 的社区。
 
 认为技术能改变世界。
 
