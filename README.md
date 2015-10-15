@@ -1,5 +1,2 @@
-Jekyll Light
-=============
-
-my personal blog，
+my personal blog：[veryyoung.me](https://veryyoung.github.io/  )
 
