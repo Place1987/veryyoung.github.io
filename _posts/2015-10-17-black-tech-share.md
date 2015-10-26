@@ -194,3 +194,22 @@ Vagrant 和 Docker 并不是相互竞争，而是互补的关系。
 -----
 
 
+下面会介绍几款软件来增强 Windows... 
+
+
+
+##4.	[cmder](http://cmder.net/)
+
+Windows 自带的命令行是非常弱的， ls、ssh、ps、grep、VIM  之类特别常用的命令都没有。
+
+cmder 提供了很多常用的 Linux 命令，同时也提供了很多增强功能。
+
+比如新开 tab、分屏。
+
+linux 下 bash 的快捷键大多都可以使用, 比如 清屏 ctrl + l, ctrl + u, 甚至是历史搜索 ctrl + r 。
+
+颜值也比 Window cmd 高很多很多哦！
+
+![](http://veryyoung.u.qiniudn.com/cmder-main.jpg)
+
+![](http://veryyoung.u.qiniudn.com/20151026195931.png)
