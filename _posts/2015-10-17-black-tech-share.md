@@ -190,6 +190,8 @@ Vagrant 是一款管理虚拟机的工具，而 Docker 是一款通过将应用�
 
 Vagrant 和 Docker 并不是相互竞争，而是互补的关系。
 
+上次去听了公司内部的一个 Docker 分享，他们的做法是把 Docker 通过各种 Hack 的方法改成了一个虚拟机，个人感觉还不如直接用 Vagrant！！
+
 
 -----
 
@@ -198,7 +200,7 @@ Vagrant 和 Docker 并不是相互竞争，而是互补的关系。
 
 
 
-##4.	[cmder](http://cmder.net/)
+##5.	[cmder](http://cmder.net/)
 
 Windows 自带的命令行是非常弱的， ls、ssh、ps、grep、VIM  之类特别常用的命令都没有。
 
@@ -213,3 +215,32 @@ linux 下 bash 的快捷键大多都可以使用, 比如 清屏 ctrl + l, ctrl +
 ![](http://veryyoung.u.qiniudn.com/cmder-main.jpg)
 
 ![](http://veryyoung.u.qiniudn.com/20151026195931.png)
+
+
+##6.	[Wox](https://www.getwox.com/)
+
+Launcher 的主要作用之一就是快速定位并启动应用程序，还可以当做计算器，定位文件，打开网页，Google 搜索等， 是使用 Mac 的必备软件。
+
+Mac 平台有很多成熟的 Launcher，比如 Alfred、Quicksilver，甚至是 QQ 自带的 Swiftly（俗称 double command）。
+
+下面是一个典型的 Launcher
+
+![](http://ww2.sinaimg.cn/large/644eac00gw1e8hp0flg1dj20bw09ajry.jpg)
+
+Windows 下也有 Launcher 啦！
+
+它就是 Wox。
+
+Wox 是国人开发的一款开源 Windows Launcher，代码维护在 [https://github.com/qianlifeng/Wox](https://github.com/qianlifeng/Wox)
+
+长这样：
+
+![](http://veryyoung.u.qiniudn.com/wox_preview.5098c3ba.jpg)
+
+用法和 Mac 下的 Launcher 差不多，同时也支持插件，比如这样：
+
+![](http://ww3.sinaimg.cn/large/5d7c1fa4gw1eehedzwcwqj20et09xq3n.jpg)
+
+或者这样：
+
+![](http://veryyoung.u.qiniudn.com/movie-d9daa479-6c37-4de1-b0dc-4e264266b3e9.gif)
