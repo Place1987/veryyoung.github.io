@@ -354,3 +354,6 @@ Lantern是一个免费的桌面程序。它能帮助你随时随地快速、可�
 https 会对信息加密，保护到用户的隐私，避免钓鱼等。
 
 HTTPS Everywhere会将带有http链接重定向到https（如果有）链接。
+
+
+Markdown、EverNote、MaXiang、Sublime&VSCode、GitHub、Gradle、IDEA、more
