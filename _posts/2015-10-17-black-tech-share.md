@@ -244,3 +244,18 @@ Wox 是国人开发的一款开源 Windows Launcher，代码维护在 [https://g
 或者这样：
 
 ![](http://veryyoung.u.qiniudn.com/movie-d9daa479-6c37-4de1-b0dc-4e264266b3e9.gif)
+
+
+##7.	[Everything ](http://www.voidtools.com/)
+
+Windows 自带的搜索卡得令人发指。
+
+Everything 是一款很牛的文件搜索软件， 速度飞快，支持正则表达式。
+
+来个测试！
+
+比如我想找个 hadoop 的例子
+
+这下子快到令人发指了！
+
+![](http://veryyoung.u.qiniudn.com/everything-hadoop.gif)
