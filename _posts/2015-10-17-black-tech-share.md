@@ -357,3 +357,22 @@ HTTPS Everywhere会将带有http链接重定向到https（如果有）链接。
 
 
 Markdown、EverNote、MaXiang、Sublime&VSCode、GitHub、Gradle、IDEA、more
+
+
+各种新奇的、好玩的技术或者技术产品，能让开发过程变得更简单和方便，能提高工作效率。
+
+
+各种新奇的、好玩的技术或者技术产品，能让开发过程变得更简单和方便，能提高工作效率。
+
+
+1、小工具&浏览器插件
+
+2、虚拟化&容器
+
+3、代码管理&构建
+
+4、编辑器&IDE&IDE插件
+
+5、Java Jars
+
+6、Others
