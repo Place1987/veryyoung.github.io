@@ -7,6 +7,26 @@ comments: true
 categories: [Share]
 ---
 
+
+各种新奇的、好玩的技术或者技术产品，能让开发过程变得更简单和方便，能提高工作效率。
+
+
+1、小工具&浏览器插件
+
+2、虚拟化&容器
+
+3、代码管理&构建
+
+4、编辑器&IDE&IDE插件
+
+5、Java Jars
+
+6、Others
+
+<!-- more -->
+
+-----
+
 我是90后，准确的来说是92年出生，可能是在场人员中最小的一个。
 
 90后的一个很显著的特点就是兴趣点很丰富，有时候会很奇特，容易喜欢上一些稀奇古怪的东西，比如：
@@ -353,26 +373,71 @@ Lantern是一个免费的桌面程序。它能帮助你随时随地快速、可�
 
 https 会对信息加密，保护到用户的隐私，避免钓鱼等。
 
-HTTPS Everywhere会将带有http链接重定向到https（如果有）链接。
+HTTPS Everywhere会将带有 http 链接重定向到 https（如果有）链接。
+
+##9.	[Markdown](https://zh.wikipedia.org/zh-cn/Markdown)
+
+Markdown 是一种轻量级标记语言，它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的 HTML 文档”。
+
+语法示例：
+
+图片：
+
+	![Foo](http://img0.bdstatic.com/img/image/4a75a05f8041bf84df4a4933667824811426747915.jpg)
+	
+![Foo](http://img0.bdstatic.com/img/image/4a75a05f8041bf84df4a4933667824811426747915.jpg)
+
+加强：
+
+	*强调* 或者 _强调_  (示例：斜体)
+
+ 
+	**加重强调** 或者 __加重强调__ (示例：粗体)
+	
+	
+	***特别强调*** 或者 ___特别强调___ (示例：粗斜体)
+
+*强调* 或者 _强调_  (示例：斜体)
+
+ 
+**加重强调** 或者 __加重强调__ (示例：粗体)
+
+ 
+***特别强调*** 或者 ___特别强调___ (示例：粗斜体)
 
 
-Markdown、EverNote、MaXiang、Sublime&VSCode、GitHub、Gradle、IDEA、more
+引用：
+
+	> 这是一个引用。
+	
+> 这是一个引用。
 
 
-各种新奇的、好玩的技术或者技术产品，能让开发过程变得更简单和方便，能提高工作效率。
+语法非常的简单，想做复杂的排版也只能依赖 HTML+CSS了， Markdown 不擅长也做不了那些事。
 
 
-各种新奇的、好玩的技术或者技术产品，能让开发过程变得更简单和方便，能提高工作效率。
+Markdown 比较适合那些需要经常码字或者进行文字排版的、对码字手速和排版顺畅度有要求的人群设计的，他们希望用键盘把文字内容啪啪啪地打出来后就已经排版好了，最好从头到尾都不要使用鼠标。这些人包括经常需要写文档的码农、博客写手、网站小编、出版业人士等等。 
+
+市面上也有很多可见即可得的 Markdown 编辑器，很多文本编辑器和 IDE 也在慢慢支持 Markdown。
+
+![](http://veryyoung.u.qiniudn.com/markdow-editor-mou.png)	
 
 
-1、小工具&浏览器插件
+很多网站都已支持 Markdown 来发文章或者评论，比如 GitHub、WordPress、 V2EX、锤子便签、简书......
 
-2、虚拟化&容器
 
-3、代码管理&构建
+强烈推荐使用 Markdown 来管理文档。
 
-4、编辑器&IDE&IDE插件
+用 Markdown 可以像管理代码一样来管理文档，而且很多开源项目也都在这样干了。
 
-5、Java Jars
+用 Markdown + 版本控制工具来管理文档，意味着你可以使用 协作、分支、diff、history 甚至 merge 这些代码管理才有的功能。
 
-6、Others
+CRM 组貌似把 MRD 放在 ChangeLog 里面，但管理的是二进制的 word 文档，意味着版本控制工具的高级点的用法完全丢失了。
+
+Markdown 被玩出了各种花样，比如 [写简历](https://github.com/geekcompany/ResumeSample)、[PPT](https://github.com/ksky521/nodePPT)、[写书](https://github.com/larrycai/kaiyuanbook/blob/master/zh/chapters/01-chapter3.markdown)、[博客](https://jekyllrb.com/)、[WIKI&文档](https://github.com/gollum/gollum).....
+
+	
+
+EverNote、MaXiang、Sublime&VSCode、Git、Gradle、CI、IDEA、Jars、more
+
+
