@@ -436,8 +436,40 @@ CRM 组貌似把 MRD 放在 ChangeLog 里面，但管理的是二进制的 word 
 
 Markdown 被玩出了各种花样，比如 [写简历](https://github.com/geekcompany/ResumeSample)、[PPT](https://github.com/ksky521/nodePPT)、[写书](https://github.com/larrycai/kaiyuanbook/blob/master/zh/chapters/01-chapter3.markdown)、[博客](https://jekyllrb.com/)、[WIKI&文档](https://github.com/gollum/gollum).....
 
-	
+-----
 
-EverNote、MaXiang、Sublime&VSCode、Git、Gradle、CI、IDEA、Jars、more
+##10.	[Git](https://git-scm.com/)	
+
+Git 是 Lunus 大爷的第二个伟大作品。
+
+第一个伟大作品是什么？大名鼎鼎的 Linux！
+
+Lunus 是一个非常有个性的人，可以从两个 F**K 事件中体现出来。
+
+第一个事件：网传 Lunus 的简历上只有一行字：I created Lunus and fuck you
+第二个事件：Lunus 对英伟达对 Linux 平台没有提供足够的支持表示不满，在某大学演讲的时候公开的对 NVIDIA 竖起了中指，并说：“这是一个我们从未合作过的垃圾公司”
+
+![](http://veryyoung.u.qiniudn.com/2e03fad339338ced760ab3f2ec1d5858.png)
+
+Lunus 大爷是坚定的 CVS 反对者，他也同样地反对 SVN，当时要想劝说 Linus 使用 CVS 只有一个办法：把 CVS 服务器请进 Linus 的卧室，并对外配以千兆带宽。
+
+Linus 虽然创建了 Linux，但 Linux 的壮大是全球开源贡献者的成果。
+
+事实是，在2002年以前，世界各地的志愿者把源代码文件通过diff的方式发给Linus，然后由Linus本人通过手工方式合并代码。
+
+随着项目的慢慢壮大，手工的方式越来越难以管理了，Linus 引进了一款叫做 BitKeeper 的代码管理工具。
+
+Lunux 的开发者都是大神，有人尝试着破解 BitKeeper，被发现了。
+
+BitKeeper 向 Linux 收回授权。
+
+Lunus 大爷怒了，三天就完成了一款代码管理工具的开发，这就是大名鼎鼎的 Git，一个月后，Linux 的代码已经托管在 Git 上了。
+
+
+
+
+----
+
+Sublime&VSCode、Git、Gradle、CI、IDEA、Jars、more
 
 
