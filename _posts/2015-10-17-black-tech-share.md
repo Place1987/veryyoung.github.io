@@ -447,6 +447,7 @@ Git 是 Lunus 大爷的第二个伟大作品。
 Lunus 是一个非常有个性的人，可以从两个 F**K 事件中体现出来。
 
 第一个事件：网传 Lunus 的简历上只有一行字：I created Lunus and fuck you
+
 第二个事件：Lunus 对英伟达对 Linux 平台没有提供足够的支持表示不满，在某大学演讲的时候公开的对 NVIDIA 竖起了中指，并说：“这是一个我们从未合作过的垃圾公司”
 
 ![](http://veryyoung.u.qiniudn.com/2e03fad339338ced760ab3f2ec1d5858.png)
@@ -465,10 +466,63 @@ BitKeeper 向 Linux 收回授权。
 
 Lunus 大爷怒了，三天就完成了一款代码管理工具的开发，这就是大名鼎鼎的 Git，一个月后，Linux 的代码已经托管在 Git 上了。
 
+Git 是分布式的版本控制工具，分布式意味着每个开发人员可以从中心版本库/服务器上 clone 一份到 local。
+
+在 local 可以随意折腾，各种新建分支，切换分支，暂存，stash，merge，等到必要的时候再 push 到 origin。
+
+经常有这样的事情发生，当你正在进行项目中某一部分的工作，里面的东西处于一个比较杂乱的状态，而你想转到其他分支上进行一些工作。问题是，你不想提交进行了一半的工作，否则以后你无法回到这个工作点。
+
+比较 low 的一种方案是  commit 到 local，然后 再 checkout 到 other branch。
+
+这种方案不太建议，每个 commit 最好要是有意义的，可用的。
+
+Git  的解决方案就是：git stash命令。
+
+而 svn 只能 commit 到 origin，或者 copy 本地修改，手工维护。
+
+Git review 代码会更加的方便， 你可以 fork 一份别人的代码，你并木有 push 权限，你只能先 push 到自己的分支，然后对别人的项目发起一个 pull request，由项目管理员来决定是否 merge。
+
+SVN 的分支是 copy 一份， 而 Git 的分支切换只是简单的移动 HEAD 指针。
+
+
+总结下 Git 相对于 SVN 的优点：
+
+1.	离线操作;
+2.	公共服务器压力和数据量小;
+3.	分支操作方便;
+4.	暂存;
+5.  快;
+6.	更智能的追踪变化，Git 采用基于文件内容的源码跟踪，而 SVN 只是基于文件名。rename 之后 svn 将无法追踪，也无法
+merge。
+
+
+当然 Git 也有缺点：
+
+1.	学习周期长;
+2.	代码保密性差，一旦开发者把整个库克隆下来就可以完全公开所有代码和版本信息;
+3.	不能按目录进行权限划分;
+
+
+使用现状：
+
+Git 的最流行的使用者 GitHub 全面压制 SVN 的最大使用者 Google Code，Google Code 已被遗弃，提供一键转换到 GitHub 的功能。
+
+绝大大部分开源项目都活跃在 GitHub 上。
+
+各大 PaaS 服务商也在慢慢放弃 SVN 。
+
+据个人了解，国内的大公司，BAT 一般老项目继续使用 SVN，新项目都转向了 Git。
+
+比较年轻的中大型团队，如 Qunar、美团、豆瓣，全部采用 Git。
+
+创业团队绝大部分用 Git。
+
 
 
 
 ----
+
+
 
 Sublime&VSCode、Git、Gradle、CI、IDEA、Jars、more
 
