@@ -783,8 +783,17 @@ VI(编辑器之神) 和 Emacs(神的编辑器) 入门成本有点高，但慢慢
 
 这两编辑器提供了类似 IDE 的很多功能，比如丰富的快捷键、查找、切换、文件切换、代码高亮、代码提升等，通过一些插件的配合可以用起来和 IDE 一样方便，但速度完爆 IDE。
 
+都是免费的，而且颜值高！
+
+![](http://veryyoung.u.qiniudn.com/sublime-show-1.gif)
+
+![](http://veryyoung.u.qiniudn.com/sublime-show-2.gif)
+
+![](http://veryyoung.u.qiniudn.com/sublime-show-3.gif)
+
+
 
 ----
-Sublime&VSCode、IDEA、Jars、more
+IDEA、Jars、more
 
 
