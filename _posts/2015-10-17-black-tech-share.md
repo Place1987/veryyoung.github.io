@@ -833,6 +833,8 @@ CSDN 对这款产品有[非常详细的介绍](http://mall.csdn.net/product/623)
 ----
 
 
-AceJump、GsonFormat、RestClient、LiveEdit、Key Promoter、CamelCase、CodeGlance、CheckStyle、FindBugs、Jrebel、Jars、more
+PMD、AceJump、GsonFormat、RestClient、LiveEdit、Key Promoter、CamelCase、CodeGlance、CheckStyle、FindBugs、Jrebel、Jars、more
 
+
+logback、Lombok、dubbo、guava、apache commons、play、javatuples、jfinal、joda、jsoup、fastjson、druid、Spring Boot、Grails、bintray、SLF4J+LogBack、OkHttp、mock
 
