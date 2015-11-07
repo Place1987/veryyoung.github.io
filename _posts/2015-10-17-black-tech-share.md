@@ -809,6 +809,12 @@ CSDN 对这款产品有[非常详细的介绍](http://mall.csdn.net/product/623)
 
 这也是 Jetbrains 家的 IDE 的共同优点。
 
+我觉得比较赞的一个功能是 Ctrl+W ：如果你在一个字符串的一个单词中，按一下Ctrl+W，会选中光标所在单词。再按一下，会选中整个字符串的内容，不包括引号。再按一下，会选中包括引号的字符串。再按一下，会选中整个表达式（如果表达式含有括号，会逐层选中）。再按一下，会选中整个语句块。再按一下，会选中整个方法。再按一下，会选中整个类。
+
+还有一个功能是 查看源码非常方便，自动将 class decode，同时还能在 decode 之后的源码中打断点调试。
+
+
+
 缺点还是有的：
 
 1：占内存（IDEA 为了提供即时的、智能的提示，会在后台做很多索引和运算）
@@ -827,6 +833,6 @@ CSDN 对这款产品有[非常详细的介绍](http://mall.csdn.net/product/623)
 ----
 
 
-Jars、more
+AceJump、GsonFormat、RestClient、LiveEdit、Key Promoter、CamelCase、CodeGlance、CheckStyle、FindBugs、Jrebel、Jars、more
 
 
