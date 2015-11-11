@@ -183,14 +183,71 @@ Logback 是由 log4j 创始人设计的又一个开源日志组件, 用来替换
 Logback 一般与日志门面框架 [SLF4J](http://www.slf4j.org/) 配合使用。
 	
 
- 
- 
+##9.	[Joda](http://www.joda.org/joda-time/)
+
+Java 自带的时间工具 java.util.Calendar、java.util.Date 非常别扭，一个很简单的功能都要写很多很行代码。
+
+比如给一个日期加90天并输出结果：
+
+	Calendar calendar = Calendar.getInstance();
+	calendar.set(2000, Calendar.JANUARY, 1, 0, 0, 0);
+	SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss.SSS");
+	calendar.add(Calendar.DAY_OF_MONTH, 90);
+	System.out.println(sdf.format(calendar.getTime()));
+
+Joda 是 Java8 之前最优雅的 Java 时间库。
+
+上面的功能使用 Joda 只需两行
+
+	DateTime dateTime = new DateTime(2000, 1, 1, 0, 0, 0, 0);
+	System.out.println(dateTime.plusDays(90).toString("MM/dd/yyyy HH:mm:ss.SSS");
+	
+Joda 还提供了
+
+	LocalDate - 不包含具体时间的日期，年月日
+	LocalTime - 不含日期的时间，时分秒
+	Instant - 时间戳
+	DateTime - 带时区的时间
+	DateTimeZone - a better time-zone
+	Duration and Period - 时间区间
+	Interval - 时间间隔
+	一个全面的和灵活的时间格式解析
+	
+Java8 已结引进了 Joda 的思想增强了 Java 时间库，然而大部分项目都没有升到 Java8。
+
+
+##10.	[Lombok](https://projectlombok.org/)
+
+Java 程序员比较烦的一件事情之一就是要写大量的样板代码。
+
+所谓样板代码，是那些没有营养，却又不得不写的代码，写的时候觉得毫无技术含量，依样画葫芦，比如一个类的全参构造函数、无参构造函数、get/set方法、toString方法等等。
+
+虽然 IDE 可以自动生成，但每次更改字段又得重新生成，不够优雅！
+
+Lombok 就能比较优雅的解决掉这个烦恼！
+
+详情请参考 [使用 Lombok 来缩减 Java 代码](/blog/2015/10/08/use-lombok-to-reduce-your-java-code.html)
+
+##11 [Druid](https://github.com/alibaba/druid)
+
+>Druid 是Java语言中最好的数据库连接池。Druid能够提供强大的监控和扩展功能。
+
+Druid 来自阿里巴巴集团，在功能、性能、扩展性方面，都超过其他数据库连接池，包括 DBCP、C3P0、BoneCP、Proxool、JBoss DataSource。
+
+Druid 不仅仅是一个数据库连接池，还提供了强大的监控功能，可以在 web 页面上看到连接池和 Sql 的工作情况。
+
+其次，方便扩展。Druid 提供了 Filter-Chain 模式的扩展 API，可以自己编写 Filter 拦截 JDBC 中的任何方法，可以在上面做任何事情，比如说性能监控、SQL审计、用户名密码加密、日志等等。 
+
+Druid 内置提供了用于监控的 StatFilter、日志输出的 Log 系列 Filter、防御 SQL 注入攻击的 WallFilter。 
+
+在 Druid 的 GitHub 地址上有很详细的 Druid 介绍、使用  [Wiki](https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+
 
 -----
 
 @TODO
 
-Lombok、dubbo、play、jfinal、joda、druid、Spring Boot、Grails、bintray
+dubbo、play、jfinal、Spring Boot、Grails
 
 
 
