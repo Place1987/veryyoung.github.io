@@ -243,11 +243,54 @@ Druid 内置提供了用于监控的 StatFilter、日志输出的 Log 系列 Fil
 在 Druid 的 GitHub 地址上有很详细的 Druid 介绍、使用  [Wiki](https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
 
 
------
 
-@TODO
+##12 [Dubbo](http://dubbo.io/)
 
-dubbo、play、jfinal、Spring Boot、Grails
+Dubbo 是一个阿里巴巴开源出来的一个分布式服务框架，致力于提供高性能和透明化的 RPC 远程服务调用方案，以及 SOA 服务治理方案。
+
+使用起来非常简单：
+
+
+服务端：	
+	
+	<bean id=“xxxService” class=“com.xxx.XxxServiceImpl” /> 
+	
+	<dubbo:service interface=“com.xxx.XxxService” ref=“xxxService” /> 
+
+客户端：
+
+	<dubbo:reference id=“xxxService” interface=“com.xxx.XxxService” /> 
+	
+Dubbo 采用全 Spring 配置方式，透明化接入应用，对应用没有任何 API 侵入，只需用 Spring 加载 Dubbo 的配置即可。
+
+Dubbo 支持各种常用的协议，如 Thrift、RMI、Hessian、WebService 等。
+
+同时也提供了注册中心、监控中心等。
+
+比我们内部自己写的 SOA 使用起来会简单不少。
+
+
+##13 [Spring Boot](http://projects.spring.io/spring-boot/)
+
+Spring Boot 是一个微框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。
+
+约定大于配置！！！
+
+Spring 平台饱受非议的一点就是大量的 XML 配置以及复杂的依赖管理，Spring Boot 可以做到 0 xml，同时 pom 文件也可以极大化的减小。
+
+##14 [JFinal](http://www.jfinal.com/)
+
+JFinal 是基于 Java 语言的极速 WEB + ORM 框架，其核心设计目标是开发迅速、代码量少、学习简单、功能强大、轻量级、易扩展、Restful。 
+
+在拥有Java语言所有优势的同时再拥有 ruby、python、php 等动态语言的开发效率！为您节约更多时间，去陪恋人、家人和朋友 :)
+
+![](http://veryyoung.u.qiniudn.com/20151112212459.png)
+
+快速出 demo 神器！
+
+类似这种的框架还有 [Play](https://www.playframework.com/)、[Grails](https://grails.org/)、[Ninja](http://www.ninjaframework.org/)、[Spark](http://sparkjava.com/) 等。
+
+
 
 
 
