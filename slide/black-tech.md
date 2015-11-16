@@ -265,12 +265,12 @@ Vagrant 使用起来非常简单：
 
 <br/>
 
-<pre><code class="markdown">
+```
 
 	vagrant init # 初始化
 	vagrant up   # 启动
 	
-</code></pre>
+```
 	 
 	 
 <br/>
@@ -353,7 +353,7 @@ jdk-8u51-linux-x64.gz、apache-maven-3.3.3-bin.tar.gz
 
 创建一个 Dockerfile 文件，包含以下内容
 
-<pre><code class="markdown">
+```
 
 	FROM ubuntu
 	RUN apt-get update
@@ -364,7 +364,7 @@ jdk-8u51-linux-x64.gz、apache-maven-3.3.3-bin.tar.gz
 	ENV M2_HOME /usr/local/apache-maven-3.3.3
 	ENV PATH $PATH:$JAVA_HOME/bin:$M2_HOME/bin
 	
-</code></pre>
+```
 
 
 [slide]
@@ -376,19 +376,19 @@ jdk-8u51-linux-x64.gz、apache-maven-3.3.3-bin.tar.gz
 
 构建：
 
-<pre><code class="markdown">
+```
 	
 	docker build -t dev 
 
-</code></pre>
+```
 
 运行
 
-<pre><code class="markdown">
+```
 	
 	sudo docker run -p 8080:8080 dev
 
-</code></pre>
+```
 
 然后可以在浏览器访问 localhost:8080 了。
 
@@ -417,3 +417,330 @@ Vagrant 和 Docker 并不是相互竞争，而是互补的关系,你甚至可以
 
 感觉就是一个有 Docker 优点（秒级启动、版本控制）的 Vagrant ！
  
+ 
+[slide]
+
+## 代码管理&构建
+
+<br/>
+
+* Git {:&.fadeIn}
+* Gradle
+* Travis 
+
+[slide]
+
+##[Git](https://git-scm.com/)
+
+<br/>
+
+Git 是 Lunus 大爷的第二个伟大作品。
+
+<br/>
+
+第一个伟大作品是什么？
+
+<br/>
+
+大名鼎鼎的 Linux！ {:&.zoomIn}
+
+<br/>
+
+[slide]
+
+Lunus 是一个非常有个性的人，可以从两个 F**K 事件中体现出来。
+
+<br/>
+
+第一个事件：网传 Lunus 的简历上只有一行字：I created Lunus and fuck you
+
+<br/>
+
+第二个事件：Lunus 对英伟达对 Linux 平台没有提供足够的支持表示不满，在某大学演讲的时候公开的对 NVIDIA 竖起了中指，并说：“这是一个我们从未合作过的垃圾公司”
+
+
+[slide style="background-image:url('http://veryyoung.u.qiniudn.com/2e03fad339338ced760ab3f2ec1d5858.png')"]
+
+
+[slide]
+
+Linus 虽然创建了 Linux，但 Linux 的壮大是全球开源贡献者的成果。
+
+<br/>
+
+Lunus 大爷是坚定的 CVS 反对者，他也同样地反对 SVN。
+
+<br/>
+
+在2002年以前，世界各地的志愿者把源代码文件通过diff的方式发给Linus，然后由Linus本人通过手工方式合并代码。
+
+<br/>
+
+随着项目的慢慢壮大，手工的方式越来越难以管理了，Linus 引进了一款叫做 BitKeeper 的代码管理工具。
+
+[slide]
+
+Lunux 的开发者都是大神，有人尝试着破解 BitKeeper，被发现了。
+
+<br/>
+
+BitKeeper 向 Linux 收回授权。
+
+<br/>
+
+Lunus 大爷怒了，三天就完成了一款代码管理工具的开发，这就是大名鼎鼎的 Git，一个月后，Linux 的代码已经托管在 Git 上了。
+
+[slide]
+
+Git 是分布式的版本控制工具，分布式意味着每个开发人员可以从中心版本库/服务器上 clone 一份到 local。
+
+<br/>
+
+在 local 可以随意折腾，各种新建分支，切换分支，暂存，stash，merge，等到必要的时候再 push 到 origin。
+
+<br/>
+
+
+[slide]
+
+经常有这样的事情发生，当你正在进行项目中某一部分的工作，里面的东西处于一个比较杂乱的状态，而你想转到其他分支上进行一些工作。问题是，你不想提交进行了一半的工作，否则以后你无法回到这个工作点。
+
+<br/>
+
+
+比较 low 的一种方案是  commit 到 local，然后 再 checkout 到 other branch。
+
+<br/>
+
+这种方案不太建议，每个 commit 最好要是有意义的，可用的。
+
+<br/>
+
+[slide]
+
+Git  的解决方案就是：git stash命令。
+
+<br/>
+
+Git stash 暂存你当时的状态，然后你可以切换到其它地方做任何你想做的事情。
+
+<br/>
+
+等你忙完别的再切回来继续处理。
+
+<br/>
+
+而 svn 只能 commit 到 origin（这时候代码是乱的，可能编译都通过不了，会气死其他同事的），或者 copy 本地修改，手工维护。
+
+
+[slide]
+
+Git review 代码会更加的方便， 你可以 fork 一份别人的代码，你并木有 push 权限，你只能先 push 到自己的分支，然后对别人的项目发起一个 pull request，由项目管理员来决定是否 merge。
+
+<br/>
+
+给开源项目贡献代码就是这样干的！
+
+
+[slide]
+
+###总结下 Git 相对于 SVN 的优点：
+
+<br/>
+
+1.	离线操作;
+2.	公共服务器压力和数据量小;
+3.	分支操作方便（SVN 的分支是 copy 一份， 而 Git 的分支切换只是简单的移动 HEAD 指针）;
+4.	暂存;
+5.  快;
+6.	更智能的追踪变化，Git 采用基于文件内容的源码跟踪，而 SVN 只是基于文件名。rename 之后 svn 将无法追踪，也无法
+merge。
+
+
+[slide]
+
+###当然 Git 也有缺点：
+
+<br/>
+
+1.	学习周期长;
+2.	不能按目录进行权限划分（据说可以通过第三方工具来实现）;
+
+[slide]
+
+###使用现状：
+
+<br/>
+
+Git 的最流行的使用者 GitHub 全面压制 SVN 的最大使用者 Google Code，Google Code 已被遗弃，提供一键转换到 GitHub 的功能。
+
+<br/>
+
+绝大大部分开源项目都活跃在 GitHub 上。
+
+<br/>
+
+各大 PaaS 服务商也在慢慢放弃 SVN 。
+
+<br/>
+
+据个人了解，国内的大公司，BAT 一般老项目继续使用 SVN，新项目都转向了 Git。
+
+<br/>
+
+比较年轻的中大型团队，如 Qunar、美团、豆瓣，全部采用 Git。
+
+<br/>
+
+创业团队绝大部分用 Git。
+
+
+[slide]
+##[Gradle](http://gradle.org/)
+
+现在我们用的构建工具主要是 Maven，其实在 Maven 之前还有一种东东，叫 Ant。
+
+Ant 非常的灵活，你可以在 build.xml 里面编写任何你想要的东西。
+
+缺点就是基于 xml 的语法非常啰嗦，难以管理，难以编写。
+
+我刚开始写程序的时候用的是 Ant，反正那语法我一点映像都没有了，我都是从网上找个 build.xml 的例子，然后对着例子建好目录结构。
+
+这个其实就有点 “约定优于配置” 的意思了。
+
+[slide]
+约定优于配置（convention over configuration），也称作按约定编程，是一种软件设计范式，旨在减少软件开发人员需做决定的数量，获得简单的好处，而又不失灵活性。
+
+如果您所用工具的约定与你的期待相符，便可省去配置；反之，你可以配置来达到你所期待的方式。
+
+[slide]
+
+写 Java 难免要管理一系列的 xml 文件，很麻烦，很难调试。
+
+[Ruby On Rails](https://zh.wikipedia.org/wiki/Ruby_on_Rails) 这个 Ruby 的框架将约定优于配置这个理念发挥到了极致。 
+
+你只要按照约定在对应的地方添代码就行，其他的 Rails 都帮你做好了，再加上 Ruby 这种优雅简洁的语法，开发效率要比 Java Web 快 N 多倍。
+
+用 Java 做 Web 开发要学一堆的开源框架，Ruby 一个 Ruby On Rails 全部搞定！
+
+[slide]
+
+Maven的整合这一概念，为项目提供合理的默认行为。
+
+无需定制，源代码被默认放在${basedir}/src/main/java文件夹中，资源被默认放在 ${basedir}/src/main/resources文件夹中。测试默认放在 ${basedir}/src/test文件夹中，默认一个项目产生的JAR文件。Maven的默认您要编译的字节码到 ${basedir}/target/classes，然后在${basedir}/target文件夹中创建一个分发的JAR文件。
+
+而相同的功能，Ant 得写一大串的 xml 文件。
+
+</br>
+
+Maven 很快席卷 Java 圈，几乎成了 Java Web 的标准构建工具了。
+
+[slide]
+
+然而每个项目都有自己的特定需求，标准做法必然是无法满足的。
+
+</br>
+
+比如目录更改，本地 Jar 包依赖，自定义操作等，Maven 本身没法完成，只能去写 Maven 插件。
+
+</br>
+
+扩展 Maven 对任何新手都是一件头疼的事，我们要学会编写插件，要搞清楚生命周期，这时，突然会唤起一丝丝对于 ANT 的怀念，虽然它做简单事不容易，但做复杂事却也没这么困难。
+
+[slide]
+
+Gradle 能完美的解决 Ant 和 Maven 带来的这些痛点。
+
+</br>
+
+Gradle 是其是结合了 Maven 和 Ant 双方优点的一种基于 Groovy DSL 的新式项目构建工具。而且由于是基于 Groovy 语言，所以语法上要比基于 XML 的 Maven 和 Ant 简洁许多，并且功能更加强大。 
+
+[slide]
+
+###它能提供的是：
+
+</br>
+
+1.	一个像 Ant 一样，通用的灵活的构建工具。
+2.	一种可切换的，像 Maven 一样的基于约定的构建框架，却又从不锁住你。
+3.	对多项目构建的强大支持。
+4.	强大的依赖管理（基于Apache Ivy）。
+5.	全力支持已有的 Maven 或者 Ivy 仓库基础建设。
+6.	在不需要远程仓库或者 pom.xml 或者 ivy 配置文件的前提下，支持传递性依赖管理。
+7.	兼容 Ant 任务。
+8.	基于 Groovy 脚本构建。
+
+[slide]
+
+直接上一个 Gradle 的例子
+
+<br/>
+
+```
+	buildscript {
+		repositories {
+			mavenCentral()
+		}
+		dependencies {
+			classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.6.RELEASE")
+		}
+	}
+	dependencies {
+		compile("org.springframework.boot:spring-boot-starter-web") {
+			exclude module: "spring-boot-starter-tomcat"
+		}
+		compile("org.springframework.boot:spring-boot-starter-security")
+		compile("org.springframework.boot:spring-boot-starter-data-jpa")
+		testCompile("mysql:mysql-connector-java:5.1.25")
+	}
+	
+```
+
+[slide]
+
+就这么点代码，生成一个 Spring-Boot 项目，而基于 maven 的 pom.xml 得写 N 多行了，Ant 就更多了！
+
+[slide]
+
+Gradle 可以自定义任务
+
+</br>
+
+```
+	task hello << {
+		println "hello world"
+	}
+
+```
+
+这样就定义了一个任务
+
+[slide]
+
+</br>
+
+```
+	gradle hello
+	
+```
+
+</br>
+
+就执行了。
+
+</br>
+
+Gradle 基于 Groovy 语言，你可以用 Groovy 去实现一系列复杂的操作，来代替掉 println "hello world" 。
+
+
+[slide]
+
+###使用现状：
+
+</br>
+
+Android 项目管理方面 Gradle 占有统治性地位，Android 新建项目已默认用 Gradle 管理了。
+
+</br>
+
+Java 项目大部分还是在用 Maven 管理，只有少部分比较 Geek 的团队已经切到 Gradle 了，比如 LinkedIn、Google...
