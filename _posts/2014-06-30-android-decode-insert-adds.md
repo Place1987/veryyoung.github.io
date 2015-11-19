@@ -155,10 +155,6 @@ categories: [Android]
 
 会生成签好名的apk 2048_signed.apk
 
-最后，对比下植入广告前后效果
-
-<img src="http://veryyoung.u.qiniudn.com/7niu_20140630215832.png" alt="http://veryyoung.u.qiniudn.com/7niu_20140630215832.png" />
-
-<img src="http://veryyoung.u.qiniudn.com/7niu_QQ20140630215738.png" alt="http://veryyoung.u.qiniudn.com/7niu_QQ20140630215738.png" />
+博客图片误删了，没法提供对比了。
 
 原理大概就是这样的。想定制更详细的功能，相信每个android-developer应该都可以搞定了!
