@@ -379,11 +379,6 @@ info1.getTotalCount() != info2.getTotalCount() ，三目表达式前面的条件
 	
 或者直接去掉，以前的 mapping 前面会少个斜杠，会变为 /c 和 /{username}
 
-
-看看比较的效果。
-
-![](http://veryyoung.u.qiniudn.com/20151009095659.png)
-
 这次 matches 的 size 是 1了， directPathMatches 不再是 null 了，而是 /c  !!!
 
 意思就是一下子直接找到了，上面的排序都不用了！
