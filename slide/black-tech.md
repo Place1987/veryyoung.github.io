@@ -744,3 +744,51 @@ Android 项目管理方面 Gradle 占有统治性地位，Android 新建项目�
 </br>
 
 Java 项目大部分还是在用 Maven 管理，只有少部分比较 Geek 的团队已经切到 Gradle 了，比如 LinkedIn、Google...
+
+[slide]
+		
+##谈到 Gradle 不得不说到 Groovy。		
+		
+Groovy 是 Java 平台上设计的面向对象编程语言。这门动态语言拥有类似 Python、Ruby 和 Smalltalk 中的一些特性，可以作为 Java 平台的脚本语言使用。		
+		
+Groovy 的语法与 Java 非常相似，以至于多数的 Java 代码也是正确的 Groovy 代码。Groovy 代码动态的被编译器转换成 Java 字节码。		
+		
+由于其运行在 JVM 上的特性，Groovy 可以使用其他Java语言编写的库。	
+
+[slide] {:&.zoomIn}
+		
+Java 语法真的超级啰嗦，写过 Ruby、Python、PHP 这种动态脚本语言的人应该深有体会。
+
+<br />
+
+```	
+for (int i = 0; i < 3; i++) {		
+	System.out.println("Hello world");		
+}	
+		
+```  
+
+
+[slide]  {:&.zoomIn}
+
+Groovy 可以这样写
+
+
+
+```	
+for (i in 0..2) {
+	println 'Hello world' 
+}
+	
+```	
+
+	
+或者
+
+```	
+
+3.times {
+	println 'Hello world'
+}
+
+```	
