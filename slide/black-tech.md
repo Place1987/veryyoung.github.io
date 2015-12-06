@@ -981,3 +981,64 @@ VI(编辑器之神) 和 Emacs(神的编辑器) 入门成本有点高，但慢慢
 [slide]
 
 ![](http://veryyoung.u.qiniudn.com/sublime-show-3.gif)
+
+[slide]
+
+##[IDEA](https://www.jetbrains.com/idea/)
+
+>The Most Intelligent Java IDE
+
+<br/>
+
+IDEA 是 Jetbrains 家的一款优秀的代表作，除了 IDEA 之外，他家还有 PhpStorm、PyCharm、RubyMine、WebStorm、CLion、ReSharper、Android Studio 等这几款分别在各自领域做到最好的 IDE。
+
+[slide]
+
+CSDN 对这款产品有[非常详细的介绍](http://mall.csdn.net/product/623)。
+
+<br/>
+
+个人总结一下就是
+
+<br/>
+
+1.	快、即时；
+2.	丰富的插件；
+3.	对新东西支持非常好；
+4.	Cool！
+5.	智能！智能！智能！
+
+[slide]
+
+我觉得比较赞的一个功能是 Ctrl+W ：如果你在一个字符串的一个单词中，按一下Ctrl+W，会选中光标所在单词。再按一下，会选中整个字符串的内容，不包括引号。再按一下，会选中包括引号的字符串。再按一下，会选中整个表达式（如果表达式含有括号，会逐层选中）。再按一下，会选中整个语句块。再按一下，会选中整个方法。再按一下，会选中整个类。
+
+<br/>
+
+还有一个功能是 查看源码非常方便，自动将 class decode，同时还能在 decode 之后的源码中打断点调试。
+
+[slide]
+
+##缺点还是有的
+
+<br/>
+
+1.	占内存（IDEA 为了提供即时的、智能的提示，会在后台做很多索引和运算）
+2.	贵！（目前的售价是 499刀/年）；
+
+[slide]
+
+使用情况
+
+因为价格昂贵，再加上在 Eclipse 后面出来的，国内大公司用的不是很多，创业公司和个人开发者比较喜欢用这个，不过大部分也用得上盗版。
+
+<br/>
+
+国外已经非常普及了，可能这和国外的消费观念有关。
+
+<br/>
+
+2013 年 Google I/O 大会的时候，抛弃了合作已久的 Eclipse，选择了和 IDE 新贵 IDEA 合作，推出了 IDEA For Android，也就是 [Android Studio](https://developer.android.com/intl/zh-cn/tools/studio/index.html)
+
+<br/>
+
+目前 Android Studio 已席卷 Android 圈，还在坚守 Eclipse 的 Android 开发者不多了。
