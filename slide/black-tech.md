@@ -928,3 +928,56 @@ Travis 是基于 Vagrant 来管理环境的，用虚拟化技术的云化方案�
 <br />
 
 还没法用在非 GitHub 的项目上，不过 Travis CI 已经试图将这一成功的开源项目在企业层面复制，名字也想好了：Travis Pro。
+
+
+[slide]
+
+## 编辑器&IDE&IDE插件
+
+<br/>
+
+* 编辑器 {:&.fadeIn}
+* IDEA
+* IDE 插件 
+
+
+[slide]
+
+平时写一些简单的脚本、sql，甚至一些 note 的时候，上 IDE 肯定不行， 系统自带的编辑器往往弱爆了。
+
+<br/>
+
+VI(编辑器之神) 和 Emacs(神的编辑器) 入门成本有点高，但慢慢熟悉，再加上一些插件和配置之后，会变成大杀器：完全丢掉鼠标，双眼盯着屏幕，然后使劲的啪啪啪就行。
+
+<br/>
+
+然而学习成本实在太高，想熟练使用得花费巨大的精力，反正我自己是系统的学过好几次 VIM，但最后还是只会用 i、:q! 这些最基本的命令。
+
+[slide]
+
+![](http://veryyoung.u.qiniudn.com/horrorstories.txt.jpg)
+
+[slide]
+
+给大家推荐两个开源圈用的比较多的编辑器：[Sublime](https://www.sublimetext.com/)、[VS Code](https://code.visualstudio.com/)
+
+<br/>
+
+这两编辑器提供了类似 IDE 的很多功能，比如丰富的快捷键、查找、切换、文件切换、代码高亮、代码提升等，通过一些插件的配合可以用起来和 IDE 一样方便，但速度完爆 IDE。
+
+<br/>
+
+都是免费的，而且颜值高！
+
+[slide]
+
+![](http://veryyoung.u.qiniudn.com/sublime-show-1.gif)
+
+[slide]
+
+
+![](http://veryyoung.u.qiniudn.com/sublime-show-2.gif)
+
+[slide]
+
+![](http://veryyoung.u.qiniudn.com/sublime-show-3.gif)
