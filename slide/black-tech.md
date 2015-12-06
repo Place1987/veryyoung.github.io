@@ -792,3 +792,139 @@ for (i in 0..2) {
 }
 
 ```	
+
+[slide] 
+
+可以不定义类型，Groovy 会智能的去判断类型。
+
+```	
+def coll = ["Groovy", "Java", "Ruby"]
+assert  coll instanceof Collection
+assert coll instanceof ArrayList
+
+```	
+[slide]
+
+还有这种高端玩法：
+
+```	
+def numbers = [1,2,3,4]
+assert numbers + 5 == [1,2,3,4,5]
+assert numbers - [2,3] == [1,4]
+	
+def map=['name':'john','age':14,'sex':'boy']
+map.each({ 
+	println it.getKey() + "-->" + it.getValue()
+	})
+
+```	
+
+[slide]
+
+还有一些非常省代码的特性，比如
+
+不需要 public 修饰符，不需要类型说明，不需要 getter/setter 方法，不需要 return....
+	
+Groovy 入门门槛非常低，能写 Java 的人随便看几分钟语法就可以动手写了，如果实在搞不定，直接上 Java 代码！
+
+Groovy 的优点很明显，开发效率高；因为是动态语言，缺点也很明显，性能会差不少，大概会慢五倍左右。
+
+但五倍的性能差距，在脚本语言越来越流行的今天，完全不是问题了，至少做 Web 开发没问题。
+
+[slide]
+
+使用现状：好像已经比较流行了，CRM 那边在用这个写脚本，旭日也打算推广 Groovy。
+
+[slide]
+
+##[Travis CI](https://travis-ci.org/)
+
+Travis CI 是一个在线的，分布式的持续集成服务，用来构建及测试在 GitHub 托管的代码。
+
+
+[slide]
+
+Travis 是非常简单，只需要在代码根目录放置一个 .travis.ylm。
+
+Travis 大多数时候无需显式定义流程，举例，如果有build.gradle 文件, Travis会理解它并使用 Gradle 编译它，测试等等。
+
+它会侦查你的代码并采取相应动作，如果从 Ant 切换到 Maven 再到 Gradle，无需对 Travis 或其配置做任何改变。
+
+
+使用 Travis，会让你忘记CI的存在. 无论什么时候将代码提交到仓库， Travis会发现并采取相应代码改变(包括 .travis.ylm). 如果有问题，你会收到 Email 通知。
+
+[slide]
+
+如果想做复杂的操作，也可以！
+
+来看个 .travis.ylm 的例子（来自开源项目 [ES](https://github.com/zhangkaitao/es)）
+
+[slide]
+
+```	
+
+	language: java
+	
+	env:
+	- DB=mysql
+	
+	jdk:
+	- openjdk7
+	
+	mysql:
+	database: es
+	username: root
+	password :
+	encoding: utf8
+	
+	install:
+	- mvn install -Dmaven.test.skip=true
+	
+	before_script:
+	- cd web
+	- mvn clean
+	- mvn db:create
+	- mvn db:schema
+	- mvn db:data
+	- cd ..
+	
+	script:
+	- cd common
+	- mvn test
+	- cd ..
+	- cd web
+	- mvn test -Pit
+	
+	
+	
+	notifications:
+	email:
+		- zhangkaitao0503@gmail.com
+
+```	
+
+[slide]
+
+可以在网页上看到构建历史
+
+![](http://veryyoung.u.qiniudn.com/20151206211547.png)
+
+[slide]
+
+以及构建详情
+
+![](http://veryyoung.u.qiniudn.com/20151105203213.png)
+
+详情包括对应的 commit 记录，以及详细的 构建 log (包括执行的每一条命令，以及命令执行之后的反应)。
+
+[slide]
+
+Travis 是基于 Vagrant 来管理环境的，用虚拟化技术的云化方案做成了云 CI。
+
+[slide]
+
+使用现状：目前大部分用于 GitHub 的开源项目的构建，很多知名的开源项目使用它来在每次提交的时候进行构建测试，比如 PHP、Ruby on Rails，Ruby 和 Node.js。
+
+<br />
+
+还没法用在非 GitHub 的项目上，不过 Travis CI 已经试图将这一成功的开源项目在企业层面复制，名字也想好了：Travis Pro。
