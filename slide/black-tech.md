@@ -1042,3 +1042,101 @@ CSDN 对这款产品有[非常详细的介绍](http://mall.csdn.net/product/623)
 <br/>
 
 目前 Android Studio 已席卷 Android 圈，还在坚守 Eclipse 的 Android 开发者不多了。
+
+[slide]
+## IDE插件
+
+<br />
+
+合理的安装和使用插件能显著提高编程效率
+
+
+[slide]
+
+## [CheckStyle](http://plugins.jetbrains.com/plugin/1065) 
+
+<br />
+
+通过检查对代码编码格式，命名约定，Javadoc，类设计等方面进行代码规范和风格的检查，从而有效约束开发人员更好地遵循代码编写规范。{:&.fadeIn}
+
+
+[slide]
+
+## [FindBugs](https://plugins.jetbrains.com/plugin/3847)
+
+<br />
+
+FindBugs 通过检查类文件或 JAR 文件，将字节码与一组缺陷模式进行对比从而发现代码缺陷，完成静态代码分析，可以找出常见的 bug 或者可能潜在 bug 的地方。 {:&.fadeIn}
+
+[slide]
+
+
+## [Jrebel](https://plugins.jetbrains.com/plugin/4441)
+
+<br />
+
+热部署神器，改完代码直接生效，不用重启啦！ {:&.fadeIn}
+
+[slide]
+
+## [CamelCase](https://plugins.jetbrains.com/plugin/7160)
+
+<br />
+
+可以切换变量命名风格，如 SogouInc、sogouInc、sogou—inc、SOGOU_INC {:&.fadeIn}
+
+[slide]
+
+##[RestClient](https://plugins.jetbrains.com/plugin/5951)
+
+<br />
+
+可用来调试 HTTP 接口，相当于 IDE 版的 POSTMAN {:&.fadeIn}
+
+[slide]
+
+## [CodeGlance](https://plugins.jetbrains.com/plugin/7275)
+
+<br />
+
+生成右侧代码缩略图，用过 Sublime 的肯定知道 ^_^ {:&.fadeIn}
+
+
+[slide]
+
+## [GsonFormat](https://plugins.jetbrains.com/plugin/7654)
+
+<br />
+
+把 Json 数据转为 Java 对象，很实用的！！！ {:&.fadeIn}
+
+[slide]
+
+## [AceJump](https://plugins.jetbrains.com/plugin/7086)
+
+<br />
+
+Emacs 用户肯定知道是干嘛的！！
+
+<br />
+
+所谓 AceJump，就是你按快捷键进入 AceJump 模式后（默认是 Ctrl+J），再按任一个字符，插件就会在屏幕中这个字符的所有出现位置都打上标签，你只要再按一下标签的字符，就能把光标移到该位置上。换言之，你要移动光标时，眼睛一直看着目标位置就行了，根本不用管光标的当前位置，非常舒服。 {:&.fadeIn}
+
+[slide]
+
+## [LiveEdit](https://plugins.jetbrains.com/plugin/7007)
+
+<br />
+
+Intellij IDEA 默认自动保存的，根本不用 Ctrl+S，LiveEdit 能自动更新浏览器里的网页，所以 F5 也省了 {:&.fadeIn}
+
+如果是是双屏的话，基本上所敲即所得了。 {:&.zoomIn}
+
+
+[slide]
+
+## [Key Promoter](https://plugins.jetbrains.com/plugin/4455)
+
+<br />
+
+Key Promoter 会统计你用键盘或鼠标操作了某功能几次，对应的快捷键是啥，或者建议你给常用的功能绑定快捷键。{:&.fadeIn}
