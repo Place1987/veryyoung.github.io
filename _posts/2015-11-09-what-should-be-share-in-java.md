@@ -20,7 +20,7 @@ Java 最强大的就是其丰富的解决方案。
 ##1.	[Apache Commons](https://commons.apache.org/)
 
 
-Apache Commons 我们或多或少用过一点，比如 StringUtils.isEmpty、CollectionUtils、isEmpty().
+Apache Commons 我们或多或少用过一点，比如 StringUtils.isEmpty、CollectionUtils.isEmpty().
 
 Apache Commons 封装了一些常用的工具类，减少重复操作，比如字符串操作、IO 操作、集合增强等。
 
@@ -82,7 +82,6 @@ HttpClient 用起来挺麻烦的，语法啰嗦，拿到手肯定得自己再封
 
 OkHttp 是 HttpClient 的一个成熟的替代品！
 
-首先语法很优雅：
 
 	OkHttpClient client = new OkHttpClient();
 	
@@ -93,14 +92,14 @@ OkHttp 是 HttpClient 的一个成熟的替代品！
 		.addHeader("Accept", "application/vnd.github.v3+json")
 		.build();
 	
-		Response response = client.newCall(request).execute();
-		if (!response.isSuccessful()) {
-			throw new IOException("Unexpected code " + response);
-		}
+	Response response = client.newCall(request).execute();
+	if (!response.isSuccessful()) {
+		throw new IOException("Unexpected code " + response);
+	}
 	
-		System.out.println("Server: " + response.header("Server"));
-		System.out.println("ResponseBody: " + response.body().string());
-		
+	System.out.println("Server: " + response.header("Server"));
+	System.out.println("ResponseBody: " + response.body().string());
+
 语法很简洁，几乎每一行代码都是有用的。
 
 同时支持 

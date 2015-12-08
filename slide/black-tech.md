@@ -1140,3 +1140,189 @@ Intellij IDEA 默认自动保存的，根本不用 Ctrl+S，LiveEdit 能自动�
 <br />
 
 Key Promoter 会统计你用键盘或鼠标操作了某功能几次，对应的快捷键是啥，或者建议你给常用的功能绑定快捷键。{:&.fadeIn}
+
+
+[slide]
+
+#Java Jars
+
+<br />
+
+一些常用的 Java jar 包或者框架，能让 Java 编程变得优雅许多！
+
+[slide]
+
+##[Apache Commons](https://commons.apache.org/)
+
+<br />
+
+Apache Commons 我们或多或少用过一点，比如 StringUtils.isEmpty、CollectionUtils.isEmpty(). {:&.fadeIn}
+
+<br />
+
+Apache Commons 封装了一些常用的工具类，减少重复操作，比如字符串操作、IO 操作、集合增强等。 {:&.fadeIn}
+
+[slide]
+
+![](http://veryyoung.u.qiniudn.com/apache-commons.png)
+
+[slide]
+
+##举几个例子吧：
+
+```
+// 读取网页内容
+InputStream in = new URL( "https://www.sogou.com" ).openStream();  
+try {  
+	System.out.println(IOUtils.toString(in));  
+} finally {  
+	IOUtils.closeQuietly(in);  
+} 
+
+//生成指定长度的字母和数字的随机组合字符串
+RandomStringUtils.randomAlphanumeric(5); 
+
+```
+
+[slide]
+
+##[Guava](https://code.google.com/p/guava-libraries/)
+
+<br />
+
+Guava 是 Google 出品的第三方工具库，功能和 Apache Commons 有点类似。 {:&.zoomIn}
+
+<br />
+
+Guava 做了很多数据结构的增强，比如不可变集合、多项映射的 Map 等。 {:&.zoomIn}
+
+<br />
+
+这个也同样建议系统的学习，能让 Java 编程变得优雅不少。 {:&.zoomIn}
+
+
+[slide]
+
+##[并发编程网](http://ifeve.com/) 有个不错的中文版教程: [Google Guava官方教程（中文版）](http://ifeve.com/google-guava/)
+
+
+[slide]
+
+##[javatuples](http://www.javatuples.org/)
+
+<br />
+
+编程过程中经常会遇到多个返回值的问题，通常返回一个 Array、集合（List、Set、Map）或自定义一个 Class。 {:&.zoomIn}
+
+<br />
+
+在很多语言中都提供元组类型 Tuple 的支持，比如 Scala、C++、.Net。 {:&.zoomIn}
+
+[slide]
+
+javatuples 是一个很简单的 lib，它没有什么华丽的功能，就是提供了支持返回多个元素的一些类。
+
+<br />
+
+```
+
+Unit<A> (1 element)
+Pair<A,B> (2 elements)
+Triplet<A,B,C> (3 elements)
+Quartet<A,B,C,D> (4 elements)
+Quintet<A,B,C,D,E> (5 elements)
+Sextet<A,B,C,D,E,F> (6 elements)
+Septet<A,B,C,D,E,F,G> (7 elements)
+Octet<A,B,C,D,E,F,G,H> (8 elements)
+Ennead<A,B,C,D,E,F,G,H,I> (9 elements)
+Decade<A,B,C,D,E,F,G,H,I,J> (10 elements)
+
+```
+
+[slide]
+
+##[OkHttp](https://github.com/square/okhttp)
+
+<br />
+
+HttpClient 用起来挺麻烦的，语法啰嗦，拿到手肯定得自己再封装一次，而且一堆废弃的 api， not happy....  {:&.zoomIn}
+
+<br />
+
+OkHttp 是 HttpClient 的一个成熟的替代品！ {:&.zoomIn}
+
+[slide]
+
+```
+OkHttpClient client = new OkHttpClient();
+
+Request request = new Request.Builder()
+	.url("https://api.github.com/repos/square/okhttp/issues")
+	.header("User-Agent", "OkHttp Headers.java")
+	.addHeader("Accept", "application/json; q=0.5")
+	.addHeader("Accept", "application/vnd.github.v3+json")
+	.build();
+
+Response response = client.newCall(request).execute();
+if (!response.isSuccessful()) {
+	throw new IOException("Unexpected code " + response);
+}
+
+System.out.println("Server: " + response.header("Server"));
+System.out.println("ResponseBody: " + response.body().string());
+
+```
+
+[slide]
+
+语法很简洁，几乎每一行代码都是有用的。 
+
+<br />
+
+同时支持 
+
+<br />
+
+1.	GZIP;  {:&.zoomIn}
+2.	缓存，减少重复请求;
+3.	SPDY；
+4.	连接池；
+5.	失败重试;
+
+[slide]
+
+##Android 官方推荐使用 OkHttp，同时在6.0删除了对 HttpClient 的内置。
+
+
+[slide]
+
+##[jsoup](http://jsoup.org/)
+
+<br />
+
+jsoup 是一款 Java 的 HTML 解析器，可直接解析某个 URL 地址的 HTML 文本内容。 {:&.fadeIn}
+
+<br />
+
+它提供了一套非常省力的 API，可通过 DOM，CSS 以及类似于 jQuery 的操作方法来取出和操作数据。 {:&.zoomIn}
+
+[slide]
+
+```
+
+Document doc = Jsoup.connect("https://www.sogou.com/").get();
+Elements newsHeadlines = doc.select(".s-input-box input);
+
+```
+
+<br />
+
+
+jsoup 也可以 set httpHeader 等。{:&.fadeIn}
+
+<br />
+
+可以做比较轻量级的爬虫。{:&.fadeIn}
+
+
+
