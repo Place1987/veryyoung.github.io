@@ -184,7 +184,7 @@ Logback 一般与日志门面框架 [SLF4J](http://www.slf4j.org/) 配合使用�
 
 ##9.	[Joda](http://www.joda.org/joda-time/)
 
-Java 自带的时间工具 java.util.Calendar、java.util.Date 非常别扭，一个很简单的功能都要写很多很行代码。
+Java 自带的时间工具 java.util.Calendar、java.util.Date 非常别扭，一个很简单的功能都要写很多很行代码，还得异常处理。
 
 比如给一个日期加90天并输出结果：
 
@@ -212,7 +212,7 @@ Joda 还提供了
 	Interval - 时间间隔
 	一个全面的和灵活的时间格式解析
 	
-Java8 已结引进了 Joda 的思想增强了 Java 时间库，然而大部分项目都没有升到 Java8。
+Java8 已经引进了 Joda 的思想增强了 Java 时间库，然而大部分项目都没有升到 Java8。
 
 
 ##10.	[Lombok](https://projectlombok.org/)

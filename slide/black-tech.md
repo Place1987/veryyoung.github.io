@@ -1325,4 +1325,293 @@ jsoup 也可以 set httpHeader 等。{:&.fadeIn}
 可以做比较轻量级的爬虫。{:&.fadeIn}
 
 
+[slide]
 
+[fastjson](https://github.com/alibaba/fastjson)
+
+<br />
+
+fastjson 是一个 Java 语言编写的高性能功能完善的 json 解析库，号称史上最快的 jackson，来自阿里巴巴。{:&.fadeIn}
+
+<br />
+
+除了 jdk 外不依赖任何 jar 包。 {:&.fadeIn}
+
+[slide]
+
+##用起来也非常简单，语法类似 Gson
+
+<br />
+
+```
+
+User user = new User();
+user.setId(1L);
+user.setUserName("userName");
+
+String jsonString = JSON.toJSONString(user); 
+
+user = JSON.parseObject(jsonString, User.class);
+
+```
+
+[slide]
+
+##[Mockito](http://mockito.org/)
+
+<br />
+
+Mockito 是一个流行的 Mocking 框架。 {:&.fadeIn}
+
+<br />
+
+它使用起来简单，学习成本很低，而且具有非常简洁的 API ，测试代码的可读性很高。 {:&.fadeIn}
+
+<br />
+
+因此它十分受欢迎，用户群越来越多，很多的开源的软件也选择了 Mockito。 {:&.fadeIn}
+         
+		 
+[slide]
+
+```		 
+List<String> list = mock(ArrayList.class);  
+	
+when(list.get(0)).thenReturn("helloworld");  
+
+String result = list.get(0);  
+	
+verify(list).get(0);  
+	
+Assert.assertEquals("helloworld", result);  
+
+when(list.get(1)).thenThrow(new RuntimeException("test excpetion"));  
+
+```
+
+[slide]
+
+##[Logback](http://logback.qos.ch/)
+
+<br />
+
+Logback 是由 log4j 创始人设计的又一个开源日志组件, 用来替换掉 log4j。  {:&.fadeIn}
+
+<br />
+
+据说有很多优点，我也不太清楚，我只知道用起来很优雅 ^_^ {:&.fadeIn}
+
+
+[slide]
+
+```
+// log4j
+if (logger.isDebugEnabled()) {
+	logger.debug("There are now " + count + " user accounts: " + userAccountList);
+}
+
+// slf4j
+logger.debug("There are now {} user accounts: {}", count, userAccountList);
+	
+```
+
+[slide]
+
+Logback 一般与日志门面框架 [SLF4J](http://www.slf4j.org/) 配合使用。
+
+
+[slide]
+
+[Joda](http://www.joda.org/joda-time/)
+
+<br />
+
+Java 自带的时间工具 java.util.Calendar、java.util.Date 非常别扭，一个很简单的功能都要写很多很行代码，还得异常处理。
+
+[slide]
+
+##比如给一个日期加90天并输出结果
+
+<br />
+
+```
+Calendar calendar = Calendar.getInstance();
+calendar.set(2000, Calendar.JANUARY, 1, 0, 0, 0);
+SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss.SSS");
+calendar.add(Calendar.DAY_OF_MONTH, 90);
+System.out.println(sdf.format(calendar.getTime()));
+	
+```
+
+[slide]
+
+Joda 是 Java8 之前最优雅的 Java 时间库。
+
+<br />
+
+上面的功能使用 Joda 只需两行
+
+<br />
+
+```
+
+DateTime dateTime = new DateTime(2000, 1, 1, 0, 0, 0, 0);
+System.out.println(dateTime.plusDays(90).toString("MM/dd/yyyy HH:mm:ss.SSS");
+
+``` 
+
+[slide]
+
+##Joda 还提供了
+
+<br />
+
+* LocalDate - 不包含具体时间的日期，年月日 {:&.fadeIn}
+* LocalTime - 不含日期的时间，时分秒
+* Instant - 时间戳
+* DateTime - 带时区的时间
+* DateTimeZone - a better time-zone
+* Duration and Period - 时间区间
+* Interval - 时间间隔
+* 一个全面的和灵活的时间格式解析
+
+
+[slide]
+
+Java8 已经引进了 Joda 的思想增强了 Java 时间库
+
+
+[slide]
+
+##[Lombok](https://projectlombok.org/)
+
+<br />
+
+Java 程序员比较烦的一件事情之一就是要写大量的样板代码。
+
+<br />
+
+所谓样板代码，是那些没有营养，却又不得不写的代码，写的时候觉得毫无技术含量，依样画葫芦，比如一个类的全参构造函数、无参构造函数、get/set方法、toString方法等等。
+
+<br />
+
+虽然 IDE 可以自动生成，但每次更改字段又得重新生成，不够优雅！
+
+<br />
+
+
+[slide]
+
+Lombok 就能比较优雅的解决掉这个烦恼！
+
+<br />
+
+详情请参考 [使用 Lombok 来缩减 Java 代码](http://veryyoung.me/blog/2015/10/08/use-lombok-to-reduce-your-java-code.html)
+
+[slide]
+
+##[Druid](https://github.com/alibaba/druid)
+
+<br />
+
+>Druid 是Java语言中最好的数据库连接池。Druid能够提供强大的监控和扩展功能。
+
+<br />
+
+Druid 来自阿里巴巴集团，在功能、性能、扩展性方面，都超过其他数据库连接池，包括 DBCP、C3P0、BoneCP、Proxool、JBoss DataSource。
+
+[slide]
+
+Druid 不仅仅是一个数据库连接池，还提供了强大的监控功能，可以在 web 页面上看到连接池和 Sql 的工作情况。
+
+<br />
+
+其次，方便扩展。Druid 提供了 Filter-Chain 模式的扩展 API，可以自己编写 Filter 拦截 JDBC 中的任何方法，可以在上面做任何事情，比如说性能监控、SQL审计、用户名密码加密、日志等等。 
+
+<br />
+
+Druid 内置提供了用于监控的 StatFilter、日志输出的 Log 系列 Filter、防御 SQL 注入攻击的 WallFilter。 
+
+<br />
+
+在 Druid 的 GitHub 地址上有很详细的 Druid 介绍、使用  [Wiki](https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+
+
+[slide]
+
+##[Dubbo](http://dubbo.io/)
+
+Dubbo 是一个阿里巴巴开源出来的一个分布式服务框架，致力于提供高性能和透明化的 RPC 远程服务调用方案，以及 SOA 服务治理方案。
+
+[slide]
+
+```
+<bean id=“xxxService” class=“com.xxx.XxxServiceImpl” /> 
+
+<dubbo:service interface=“com.xxx.XxxService” ref=“xxxService” /> 
+	
+```
+<br />
+
+服务端
+
+[slide]
+
+```
+<dubbo:reference id=“xxxService” interface=“com.xxx.XxxService” /> 
+	
+```
+
+<br />
+
+客户端
+
+[slide]
+
+Dubbo 采用全 Spring 配置方式，透明化接入应用，对应用没有任何 API 侵入，只需用 Spring 加载 Dubbo 的配置即可。
+
+<br />
+
+Dubbo 支持各种常用的协议，如 Thrift、RMI、Hessian、WebService 等。
+
+<br />
+
+同时也提供了注册中心、监控中心等。
+
+
+[slide]
+##[Spring Boot](http://projects.spring.io/spring-boot/)
+
+<br />
+
+Spring Boot 是一个微框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。
+
+[slide]
+
+##约定大于配置！！！
+
+<br />
+
+Spring 平台饱受非议的一点就是大量的 XML 配置以及复杂的依赖管理，Spring Boot 可以做到 0 xml，同时 pom 文件也可以极大化的减小。
+
+
+[slide]
+##[JFinal](http://www.jfinal.com/)
+
+JFinal 是基于 Java 语言的极速 WEB + ORM 框架，其核心设计目标是开发迅速、代码量少、学习简单、功能强大、轻量级、易扩展、Restful。 
+
+<br />
+
+在拥有Java语言所有优势的同时再拥有 ruby、python、php 等动态语言的开发效率！为您节约更多时间，去陪恋人、家人和朋友 :)
+
+<br />
+
+[slide]
+
+![](http://veryyoung.u.qiniudn.com/20151112212459.png)
+
+快速出 demo 神器！
+
+[slide]
+
+类似这种的框架还有 [Play](https://www.playframework.com/)、[Grails](https://grails.org/)、[Ninja](http://www.ninjaframework.org/)、[Spark](http://sparkjava.com/) 等。
