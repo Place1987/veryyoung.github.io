@@ -1615,3 +1615,26 @@ JFinal 是基于 Java 语言的极速 WEB + ORM 框架，其核心设计目标�
 [slide]
 
 类似这种的框架还有 [Play](https://www.playframework.com/)、[Grails](https://grails.org/)、[Ninja](http://www.ninjaframework.org/)、[Spark](http://sparkjava.com/) 等。
+
+
+
+[slide]
+
+## Others
+
+<br/>
+
+* Markdown {:&.fadeIn}
+* Ngrok 
+* Firebase 
+* BootStrap
+* Splunk 
+* 热部署
+
+[slide]
+
+##[Markdown](https://zh.wikipedia.org/zh-cn/Markdown)
+
+<br />
+
+Markdown 是一种轻量级标记语言，它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的 HTML 文档”。
