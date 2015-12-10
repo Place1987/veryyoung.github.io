@@ -1900,3 +1900,16 @@ Java 程序员最幸福的事情是可以在等程序编译的时候泡 Java！�
 3.	IDEA Reload
 4.	Jetty
 5.	Jrebel
+
+[slide]
+
+#探针监控
+
+<br />
+
+安装探针，实现自动化检测
+
+<br />
+
+1.	[听云](http://demo.tingyun.com/overview/application)
+2.	[OneRASP](https://rasp.oneasp.com/demo.html)
