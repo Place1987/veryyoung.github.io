@@ -1760,16 +1760,13 @@ MRD 放在 ChangeLog 里面，管理的是二进制的 word 文档，意味着�
 
 
 [slide]
-##Ngrok
+##[Ngrok](https://ngrok.com/)
 
 <br />
 
-```
 
 >Secure tunnels to localhost
->”I want to expose a local server behind a NAT or firewall to the internet.”
 
-```
 
 [slide]
 
@@ -1788,11 +1785,7 @@ MRD 放在 ChangeLog 里面，管理的是二进制的 word 文档，意味着�
 
 ./ngrok http 8090
 
-```
-
-
-```
-ngrok by @inconshreveable                                                                      (Ctrl+C to quit)
+ngrok by @inconshreveable  
 
 Tunnel Status                 online
 Version                       2.0.19/2.0.19
@@ -1813,3 +1806,41 @@ POST /auth.do                  200 OK
 
 
 ```
+
+[slide]
+
+##[Firebase](https://www.firebase.com/)
+
+<br />
+
+>Firebase can power your app's backend, including data storage, user authentication, static hosting, and more. Focus on creating extraordinary user experiences. We'll take care of the rest.
+
+[slide]
+
+```
+<script>
+
+var firebase = new Firebase('https://xop8xa2rcvk.firebaseio-demo.com/');
+
+firebase.push(text);
+
+
+firebase.on('child_added', function (snapshot) {
+    var message = snapshot.val();
+	console.log(message);
+});
+
+
+</script>
+
+```
+[slide]
+
+##国内的替代品
+
+<br />
+
+
+* [野狗](https://www.wilddog.com/) {:&.fadeIn}
+* [LeanCloud](https://leancloud.cn/) 
+* [APICloud](http://www.apicloud.com/) 
