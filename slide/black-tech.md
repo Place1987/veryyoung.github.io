@@ -1630,6 +1630,7 @@ JFinal 是基于 Java 语言的极速 WEB + ORM 框架，其核心设计目标�
 * BootStrap
 * Splunk 
 * 热部署
+* 探针监控
 
 [slide]
 
@@ -1755,3 +1756,60 @@ MRD 放在 ChangeLog 里面，管理的是二进制的 word 文档，意味着�
 * [写书](https://github.com/larrycai/kaiyuanbook/blob/master/zh/chapters/01-chapter3.markdown)
 * [博客](https://jekyllrb.com/)
 * [WIKI&文档](https://github.com/gollum/gollum)
+
+
+
+[slide]
+##Ngrok
+
+<br />
+
+```
+
+>Secure tunnels to localhost
+>”I want to expose a local server behind a NAT or firewall to the internet.”
+
+```
+
+[slide]
+
+##外网能访问需要的条件
+
+<br />
+
+1.	公网IP  {:&.fadeIn}
+2.	路由映射
+3.	80端口
+
+
+[slide]
+
+```
+
+./ngrok http 8090
+
+```
+
+
+```
+ngrok by @inconshreveable                                                                      (Ctrl+C to quit)
+
+Tunnel Status                 online
+Version                       2.0.19/2.0.19
+Web Interface                 http://127.0.0.1:4040
+Forwarding                    http://b8b5676b.ngrok.io -> localhost:8090
+Forwarding                    https://b8b5676b.ngrok.io -> localhost:8090
+
+Connections                   ttl     opn     rt1     rt5     p50     p90
+                              23      0       0.00    0.00    0.53    24.77
+
+HTTP Requests
+-------------
+
+POST /auth.do                  200 OK
+POST /auth.do                  200 OK
+POST /auth.do                  200 OK
+POST /auth.do                  200 OK
+
+
+```
