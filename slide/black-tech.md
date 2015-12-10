@@ -1627,7 +1627,7 @@ JFinal 是基于 Java 语言的极速 WEB + ORM 框架，其核心设计目标�
 * Markdown {:&.fadeIn}
 * Ngrok 
 * Firebase 
-* BootStrap
+* Bootstrap
 * Splunk 
 * 热部署
 * 探针监控
@@ -1844,3 +1844,28 @@ firebase.on('child_added', function (snapshot) {
 * [野狗](https://www.wilddog.com/) {:&.fadeIn}
 * [LeanCloud](https://leancloud.cn/) 
 * [APICloud](http://www.apicloud.com/) 
+
+[slide]
+##[Bootstrap](http://getbootstrap.com/)
+
+<br />
+
+>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+
+<br />
+
+简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。
+
+[slide]
+
+##Bootstap提供
+
+<br />
+
+* 简单快速的网格式布局 {:&.fadeIn}
+* 优美的样式
+* 兼容性良好
+* 自适应
+* 移动端友好
+* 丰富的插件
+* 主题
