@@ -1638,3 +1638,120 @@ JFinal 是基于 Java 语言的极速 WEB + ORM 框架，其核心设计目标�
 <br />
 
 Markdown 是一种轻量级标记语言，它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的 HTML 文档”。
+
+[slide]
+
+
+##图片
+
+<br />
+
+```
+
+![Foo](http://img0.bdstatic.com/img/image/4a75a05f8041bf84df4a4933667824811426747915.jpg)
+
+```
+
+<br />
+
+![Foo](http://img0.bdstatic.com/img/image/4a75a05f8041bf84df4a4933667824811426747915.jpg) {:&.fadeIn}
+
+
+[slide]
+
+##强调
+
+```
+*强调* 或者 _强调_  (示例：斜体)
+
+
+**加重强调** 或者 __加重强调__ (示例：粗体)
+
+
+***特别强调*** 或者 ___特别强调___ (示例：粗斜体)
+	
+```
+
+<br />
+
+<br />
+
+
+
+
+*强调* 或者 _强调_  (示例：斜体) {:&.fadeIn}
+
+ 
+**加重强调** 或者 __加重强调__ (示例：粗体) {:&.fadeIn}
+
+ 
+***特别强调*** 或者 ___特别强调___ (示例：粗斜体) {:&.fadeIn}
+
+
+[slide]
+
+
+##引用
+
+<br />
+
+```
+
+> 这是一个引用。
+
+```	
+
+<br />
+
+> 这是一个引用。 {:&.fadeIn}
+
+
+[slide]
+
+
+语法非常的简单，想做复杂的排版也只能依赖 HTML+CSS了， Markdown 不擅长也做不了那些事。
+
+<br />
+
+Markdown 比较适合那些需要经常码字或者进行文字排版的、对码字手速和排版顺畅度有要求的人群设计的，他们希望用键盘把文字内容啪啪啪地打出来后就已经排版好了，最好从头到尾都不要使用鼠标。这些人包括经常需要写文档的码农、博客写手、网站小编、出版业人士等等。
+
+
+[slide]
+
+市面上也有很多可见即可得的 Markdown 编辑器，很多文本编辑器和 IDE 也在慢慢支持 Markdown。
+
+
+![](http://veryyoung.u.qiniudn.com/markdow-editor-mou.png)	
+
+
+很多网站都已支持 Markdown 来发文章或者评论，比如 GitHub、WordPress、 V2EX、锤子便签、简书......
+
+[slide]
+
+## Markdown 管理文档。
+
+<br />
+
+用 Markdown 可以像管理代码一样来管理文档，而且很多开源项目也都在这样干了。
+
+<br />
+
+MRD 放在 ChangeLog 里面，管理的是二进制的 word 文档，意味着版本控制工具的高级点的用法完全丢失了。
+
+<br />
+
+
+用 Markdown + 版本控制工具来管理文档，意味着你可以使用 协作、分支、diff、history 甚至 merge 这些代码管理才有的功能。
+
+
+[slide]
+
+##新花样
+
+<br />
+
+* [写简历](https://github.com/geekcompany/ResumeSample)  {:&.fadeIn}
+* [PPT](https://github.com/ksky521/nodePPT)
+* [写书](https://github.com/larrycai/kaiyuanbook/blob/master/zh/chapters/01-chapter3.markdown)
+* [博客](https://jekyllrb.com/)
+* [WIKI&文档](https://github.com/gollum/gollum)
