@@ -1896,10 +1896,173 @@ Java 程序员最幸福的事情是可以在等程序编译的时候泡 Java！�
 <br />
 
 1.	Tomcat Reload {:&.fadeIn}
-2.	Debug 模式
+2.	Eclipse Debug 模式
 3.	IDEA Reload
 4.	Jetty
 5.	Jrebel
+
+[slide]
+##Tomcat Reload
+
+<br />
+
+修改 server.xml 的 Host 配置，加上 reloadable="true"
+
+<br />
+
+只能热部署静态文件，修改 Java 或配置会自动重启 server，效率低下，还容易造成内存溢出、 class 找不到等 bug。
+ 
+[slide]
+##Eclipse Debug 模式
+
+<br />
+
+Eclipse debug 模式修改完 Java 代码会自动重启 server。
+
+<br />
+
+缺点同上~
+
+[slide]
+
+##IDEA Reload
+
+<br />
+
+IDEA 在 debug 模式下设置失去焦点更新资源和 classes
+
+<br />
+
+![](http://veryyoung.u.qiniudn.com/20151211144609.png)
+
+[slide]
+##缺点
+
+<br />
+
+只支持静态文件、Java 现有方法的更改，新增 Java 方法、类，或者改变 SpringMVC 的 RequestMapping、Spring 配置等都不会生效。
+
+
+[slide]
+
+##Jetty
+
+<br />
+
+Jetty 会监听生成的 build 目录，遇到文件更新会自动替换掉。
+
+<br />
+
+并不能监听源码的变更。
+
+[slide]
+
+##Gradle 的解决方案
+
+<br />
+
+1.	Gradle Watch
+2.	Gretty
+3.	Continuous Build
+
+[slide]
+
+##[Gradle Watch](https://github.com/bluepapa32/gradle-watch-plugin)
+
+<br />
+
+gradle watch 的作用是监听某种类型的文件的变化，包括添加，删除和修改，然后执行预定义的任务。
+
+<br />
+
+```
+apply plugin: 'watch'
+
+watch {
+    java {
+        files files('src/main/java')
+        tasks 'compileJava'
+    }
+}
+
+```
+
+
+[slide]
+
+##缺点
+
+<br />
+
+只支持低版本 Gradle，并且已不再维护！
+
+
+[slide]
+
+##[Gretty](https://github.com/akhikhl/gretty)
+
+<br />
+
+>Gretty is a feature-rich gradle plugin for running web-apps on embedded servlet containers. 
+
+[slide]
+
+<br />
+
+Gretty 覆盖了 jettyRun 和 tomcatRun 等 task，使用起来和普通的 jettyRun 之类的一样，但是提供了热部署的功能。
+
+[slide]
+##缺点
+
+<br />
+
+热部署效率差！感觉是半重启！
+
+[slide]
+
+##[Continuous Build](http://gradle.org/feature-spotlight-continuous-build/)
+
+<br />
+
+```
+gradle -t
+
+```
+
+<br />
+
+Gradle 2.5 的 feature，持续构建。
+
+
+[slide]
+
+##缺点
+
+<br />
+
+1.	需要的 Gradle 版本太高
+2.	实验性特性
+3.	不支持 Jetty
+
+[slide]
+
+##[Jrebel](http://zeroturnaround.com/software/jrebel/)
+
+<br />
+
+>Reload Code Changes Instantly
+
+[slide]
+
+##瑕疵
+
+<br />
+
+1.	修改文件过多偶尔会异常
+2.	偶尔会失效
+3.	昂贵
+
+
 
 [slide]
 
