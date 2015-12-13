@@ -900,15 +900,12 @@ Travis 是基于 Vagrant 来管理环境的，用虚拟化技术的云化方案�
 
 [slide]
 
-平时写一些简单的脚本、sql，甚至一些 note 的时候，上 IDE 肯定不行， 系统自带的编辑器往往弱爆了。
+编辑器可以完成大部分的开发工作
 
 <br/>
 
-VI(编辑器之神) 和 Emacs(神的编辑器) 入门成本有点高，但慢慢熟悉，再加上一些插件和配置之后，会变成大杀器：完全丢掉鼠标，双眼盯着屏幕，然后使劲的啪啪啪就行。
+VI(编辑器之神) 和 Emacs(神的编辑器) 入门成本有点高，但慢慢熟悉，再加上一些插件和配置之后，会变成大杀器：传说中的键盘党。 {:&.fadeIn}
 
-<br/>
-
-然而学习成本实在太高，想熟练使用得花费巨大的精力，反正我自己是系统的学过好几次 VIM，但最后还是只会用 i、:q! 这些最基本的命令。
 
 [slide]
 
@@ -916,15 +913,12 @@ VI(编辑器之神) 和 Emacs(神的编辑器) 入门成本有点高，但慢慢
 
 [slide]
 
-给大家推荐两个开源圈用的比较多的编辑器：[Sublime](https://www.sublimetext.com/)、[VS Code](https://code.visualstudio.com/)
+给大家推荐两款编辑器：[Sublime](https://www.sublimetext.com/)、[VS Code](https://code.visualstudio.com/)
 
 <br/>
 
 这两编辑器提供了类似 IDE 的很多功能，比如丰富的快捷键、查找、切换、文件切换、代码高亮、代码提升等，通过一些插件的配合可以用起来和 IDE 一样方便，但速度完爆 IDE。
 
-<br/>
-
-都是免费的，而且颜值高！
 
 [slide]
 
@@ -943,12 +937,13 @@ VI(编辑器之神) 和 Emacs(神的编辑器) 入门成本有点高，但慢慢
 
 ##[IDEA](https://www.jetbrains.com/idea/)
 
+<br/>
+
 >The Most Intelligent Java IDE
 
 <br/>
 
-IDEA 是 Jetbrains 家的一款优秀的代表作，除了 IDEA 之外，他家还有 PhpStorm、PyCharm、RubyMine、WebStorm、CLion、ReSharper、Android Studio 等这几款分别在各自领域做到最好的 IDE。
-
+IDEA 是 Jetbrains 家的一款优秀的代表作，除了 IDEA 之外，他家还有 PhpStorm、PyCharm、RubyMine、WebStorm、CLion、ReSharper、Android Studio 等这几款分别在各自领域做到最好的 IDE。 {:&.fadeIn}
 [slide]
 
 CSDN 对这款产品有[非常详细的介绍](http://mall.csdn.net/product/623)。
@@ -959,19 +954,12 @@ CSDN 对这款产品有[非常详细的介绍](http://mall.csdn.net/product/623)
 
 <br/>
 
-1.	快、即时；
+1.	快、即时； {:&.fadeIn}
 2.	丰富的插件；
 3.	对新东西支持非常好；
 4.	Cool！
 5.	智能！智能！智能！
 
-[slide]
-
-我觉得比较赞的一个功能是 Ctrl+W ：如果你在一个字符串的一个单词中，按一下Ctrl+W，会选中光标所在单词。再按一下，会选中整个字符串的内容，不包括引号。再按一下，会选中包括引号的字符串。再按一下，会选中整个表达式（如果表达式含有括号，会逐层选中）。再按一下，会选中整个语句块。再按一下，会选中整个方法。再按一下，会选中整个类。
-
-<br/>
-
-还有一个功能是 查看源码非常方便，自动将 class decode，同时还能在 decode 之后的源码中打断点调试。
 
 [slide]
 
@@ -979,26 +967,29 @@ CSDN 对这款产品有[非常详细的介绍](http://mall.csdn.net/product/623)
 
 <br/>
 
-1.	占内存（IDEA 为了提供即时的、智能的提示，会在后台做很多索引和运算）
+1.	占内存（IDEA 为了提供即时的、智能的提示，会在后台做很多索引和运算） {:&.fadeIn}
 2.	贵！（目前的售价是 499刀/年）；
 
 [slide]
 
 使用情况
 
-因为价格昂贵，再加上在 Eclipse 后面出来的，国内大公司用的不是很多，创业公司和个人开发者比较喜欢用这个，不过大部分也用得上盗版。
+<br/>
+
+因为价格昂贵，再加上在 Eclipse 后面出来的，国内大公司用的不是很多，创业公司和个人开发者比较喜欢用这个，不过大部分也用得上盗版。 {:&.fadeIn}
 
 <br/>
 
-国外已经非常普及了，可能这和国外的消费观念有关。
+国外已经非常普及了，可能这和国外的消费观念有关。 {:&.fadeIn}
 
 <br/>
 
-2013 年 Google I/O 大会的时候，抛弃了合作已久的 Eclipse，选择了和 IDE 新贵 IDEA 合作，推出了 IDEA For Android，也就是 [Android Studio](https://developer.android.com/intl/zh-cn/tools/studio/index.html)
+2013 年 Google I/O 大会的时候，抛弃了合作已久的 Eclipse，选择了和 IDE 新贵 IDEA 合作，推出了 IDEA For Android，也就是 [Android Studio](https://developer.android.com/intl/zh-cn/tools/studio/index.html)   {:&.fadeIn}
+
 
 <br/>
 
-目前 Android Studio 已席卷 Android 圈，还在坚守 Eclipse 的 Android 开发者不多了。
+目前 Android Studio 已席卷 Android 圈，还在坚守 Eclipse 的 Android 开发者不多了。 {:&.fadeIn}
 
 [slide]
 ## IDE插件
@@ -1444,15 +1435,15 @@ Java8 已经引进了 Joda 的思想增强了 Java 时间库
 
 <br />
 
-Java 程序员比较烦的一件事情之一就是要写大量的样板代码。
+Java 程序员比较烦的一件事情之一就是要写大量的样板代码。 
 
 <br />
 
-所谓样板代码，是那些没有营养，却又不得不写的代码，写的时候觉得毫无技术含量，依样画葫芦，比如一个类的全参构造函数、无参构造函数、get/set方法、toString方法等等。
+所谓样板代码，是那些没有营养，却又不得不写的代码，写的时候觉得毫无技术含量，依样画葫芦，比如一个类的全参构造函数、无参构造函数、get/set方法、toString方法等等。 {:&.fadeIn}
 
 <br />
 
-虽然 IDE 可以自动生成，但每次更改字段又得重新生成，不够优雅！
+虽然 IDE 可以自动生成，但每次更改字段又得重新生成，不够优雅！ {:&.fadeIn}
 
 <br />
 
@@ -1463,7 +1454,7 @@ Lombok 就能比较优雅的解决掉这个烦恼！
 
 <br />
 
-详情请参考 [使用 Lombok 来缩减 Java 代码](http://veryyoung.me/blog/2015/10/08/use-lombok-to-reduce-your-java-code.html)
+详情请参考 [Lombok 官网](http://projectlombok.org/)
 
 [slide]
 
@@ -1471,11 +1462,11 @@ Lombok 就能比较优雅的解决掉这个烦恼！
 
 <br />
 
->Druid 是Java语言中最好的数据库连接池。Druid能够提供强大的监控和扩展功能。
+>Druid 是Java语言中最好的数据库连接池。Druid 能够提供强大的监控和扩展功能。
 
 <br />
 
-Druid 来自阿里巴巴集团，在功能、性能、扩展性方面，都超过其他数据库连接池，包括 DBCP、C3P0、BoneCP、Proxool、JBoss DataSource。
+Druid 来自阿里巴巴，在功能、性能、扩展性方面，都超过其他数据库连接池，包括 DBCP、C3P0 等。 {:&.fadeIn}
 
 [slide]
 
@@ -1483,20 +1474,22 @@ Druid 不仅仅是一个数据库连接池，还提供了强大的监控功能�
 
 <br />
 
-其次，方便扩展。Druid 提供了 Filter-Chain 模式的扩展 API，可以自己编写 Filter 拦截 JDBC 中的任何方法，可以在上面做任何事情，比如说性能监控、SQL审计、用户名密码加密、日志等等。 
+其次，方便扩展。Druid 提供了 Filter-Chain 模式的扩展 API，可以自己编写 Filter 拦截 JDBC 中的任何方法，可以在上面做任何事情，比如说性能监控、SQL审计、用户名密码加密、日志等等。 {:&.fadeIn}
 
 <br />
 
-Druid 内置提供了用于监控的 StatFilter、日志输出的 Log 系列 Filter、防御 SQL 注入攻击的 WallFilter。 
+Druid 内置提供了用于监控的 StatFilter、日志输出的 Log 系列 Filter、防御 SQL 注入攻击的 WallFilter。 {:&.fadeIn}
 
 <br />
 
-在 Druid 的 GitHub 地址上有很详细的 Druid 介绍、使用  [Wiki](https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+在 Druid 的 GitHub 地址上有很详细的 Druid 介绍、使用  [Wiki](https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98) {:&.fadeIn}
 
 
 [slide]
 
 ##[Dubbo](http://dubbo.io/)
+
+<br />
 
 Dubbo 是一个阿里巴巴开源出来的一个分布式服务框架，致力于提供高性能和透明化的 RPC 远程服务调用方案，以及 SOA 服务治理方案。
 
@@ -1529,11 +1522,11 @@ Dubbo 采用全 Spring 配置方式，透明化接入应用，对应用没有任
 
 <br />
 
-Dubbo 支持各种常用的协议，如 Thrift、RMI、Hessian、WebService 等。
+Dubbo 支持各种常用的协议，如 Thrift、RMI、Hessian、WebService 等。 {:&.fadeIn}
 
 <br />
 
-同时也提供了注册中心、监控中心等。
+同时也提供了注册中心、监控中心等。 {:&.fadeIn}
 
 
 [slide]
@@ -1559,7 +1552,7 @@ JFinal 是基于 Java 语言的极速 WEB + ORM 框架，其核心设计目标�
 
 <br />
 
-在拥有Java语言所有优势的同时再拥有 ruby、python、php 等动态语言的开发效率！为您节约更多时间，去陪恋人、家人和朋友 :)
+>在拥有Java语言所有优势的同时再拥有 ruby、python、php 等动态语言的开发效率！为您节约更多时间，去陪恋人、家人和朋友 :)
 
 <br />
 
@@ -1670,8 +1663,7 @@ Markdown 是一种轻量级标记语言，它允许人们“使用易读易写�
 
 <br />
 
-Markdown 比较适合那些需要经常码字或者进行文字排版的、对码字手速和排版顺畅度有要求的人群设计的，他们希望用键盘把文字内容啪啪啪地打出来后就已经排版好了，最好从头到尾都不要使用鼠标。这些人包括经常需要写文档的码农、博客写手、网站小编、出版业人士等等。
-
+Markdown 比较适合那些需要经常码字或者进行文字排版的、对码字手速和排版顺畅度有要求的人群设计的，他们希望用键盘把文字内容啪啪啪地打出来后就已经排版好了，最好从头到尾都不要使用鼠标。这些人包括经常需要写文档的码农、博客写手、网站小编、出版业人士等等。  {:&.fadeIn}
 
 [slide]
 
@@ -1693,12 +1685,12 @@ Markdown 比较适合那些需要经常码字或者进行文字排版的、对�
 
 <br />
 
-MRD 放在 ChangeLog 里面，管理的是二进制的 word 文档，意味着版本控制工具的高级点的用法完全丢失了。
+MRD 放在 ChangeLog 里面，管理的是二进制的 word 文档，意味着版本控制工具的高级点的用法完全丢失了。  {:&.fadeIn}
 
 <br />
 
 
-用 Markdown + 版本控制工具来管理文档，意味着你可以使用 协作、分支、diff、history 甚至 merge 这些代码管理才有的功能。
+用 Markdown + 版本控制工具来管理文档，意味着你可以使用 协作、分支、diff、history 甚至 merge 这些代码管理才有的功能。  {:&.fadeIn}
 
 
 [slide]
@@ -1863,22 +1855,22 @@ Java 程序员最幸福的事情是可以在等程序编译的时候泡 Java！�
 
 <br />
 
-修改 server.xml 的 Host 配置，加上 reloadable="true"
+修改 server.xml 的 Host 配置，加上 reloadable="true" {:&.fadeIn}
 
 <br />
 
-只能热部署静态文件，修改 Java 或配置会自动重启 server，效率低下，还容易造成内存溢出、 class 找不到等 bug。
+只能热部署静态文件，修改 Java 或配置会自动重启 server，效率低下，还容易造成内存溢出、 class 找不到等 bug。 {:&.fadeIn}
  
 [slide]
 ##Eclipse Debug 模式
 
 <br />
 
-Eclipse debug 模式修改完 Java 代码会自动重启 server。
+Eclipse debug 模式修改完 Java 代码会自动重启 server。 {:&.fadeIn}
 
 <br />
 
-缺点同上~
+缺点同上~ {:&.fadeIn}
 
 [slide]
 
@@ -1886,7 +1878,7 @@ Eclipse debug 模式修改完 Java 代码会自动重启 server。
 
 <br />
 
-IDEA 在 debug 模式下设置失去焦点更新资源和 classes
+IDEA 在 debug 模式下设置失去焦点更新资源和 classes 
 
 <br />
 
@@ -1897,7 +1889,7 @@ IDEA 在 debug 模式下设置失去焦点更新资源和 classes
 
 <br />
 
-只支持静态文件、Java 现有方法的更改，新增 Java 方法、类，或者改变 SpringMVC 的 RequestMapping、Spring 配置等都不会生效。
+只支持静态文件、Java 现有方法的更改，新增 Java 方法、类，或者改变 SpringMVC 的 RequestMapping、Spring 配置等都不会生效。 {:&.fadeIn}
 
 
 [slide]
@@ -1906,11 +1898,11 @@ IDEA 在 debug 模式下设置失去焦点更新资源和 classes
 
 <br />
 
-Jetty 会监听生成的 build 目录，遇到文件更新会自动替换掉。
+Jetty 会监听生成的 build 目录，遇到文件更新会自动替换掉。 {:&.fadeIn}
 
 <br />
 
-并不能监听源码的变更。
+并不能监听源码的变更。 {:&.fadeIn}
 
 [slide]
 
@@ -1918,7 +1910,7 @@ Jetty 会监听生成的 build 目录，遇到文件更新会自动替换掉。
 
 <br />
 
-1.	Gradle Watch
+1.	Gradle Watch {:&.zoomIn}
 2.	Gretty
 3.	Continuous Build
 
@@ -1997,7 +1989,7 @@ Gradle 2.5 的 feature，持续构建。
 
 <br />
 
-1.	需要的 Gradle 版本太高
+1.	需要的 Gradle 版本太高  {:&.zoomIn}
 2.	实验性特性
 3.	不支持 Jetty
 
@@ -2015,7 +2007,7 @@ Gradle 2.5 的 feature，持续构建。
 
 <br />
 
-1.	修改文件过多偶尔会异常
+1.	修改文件过多偶尔会异常  {:&.zoomIn}
 2.	偶尔会失效
 3.	昂贵
 
@@ -2031,5 +2023,5 @@ Gradle 2.5 的 feature，持续构建。
 
 <br />
 
-1.	[听云](http://demo.tingyun.com/overview/application)
+1.	[听云](http://demo.tingyun.com/overview/application)  {:&.zoomIn}
 2.	[OneRASP](https://rasp.oneasp.com/demo.html)
