@@ -1018,11 +1018,20 @@ CSDN 对这款产品有[非常详细的介绍](http://mall.csdn.net/product/623)
 
 [slide]
 
+![](http://veryyoung.u.qiniudn.com/20151214210337.png)
+
+
+[slide]
+
 ## [FindBugs](https://plugins.jetbrains.com/plugin/3847)
 
 <br />
 
 FindBugs 通过检查类文件或 JAR 文件，将字节码与一组缺陷模式进行对比从而发现代码缺陷，完成静态代码分析，可以找出常见的 bug 或者可能潜在 bug 的地方。 {:&.fadeIn}
+
+[slide]
+
+![](http://veryyoung.u.qiniudn.com/20151214210710.png)
 
 [slide]
 
@@ -1057,6 +1066,9 @@ FindBugs 通过检查类文件或 JAR 文件，将字节码与一组缺陷模式
 
 生成右侧代码缩略图，用过 Sublime 的肯定知道 ^_^ {:&.fadeIn}
 
+[slide]
+
+![](http://veryyoung.u.qiniudn.com/20151214210908.png)
 
 [slide]
 
@@ -1065,6 +1077,13 @@ FindBugs 通过检查类文件或 JAR 文件，将字节码与一组缺陷模式
 <br />
 
 把 Json 数据转为 Java 对象，很实用的！！！ {:&.fadeIn}
+
+
+[slide]
+
+![](http://veryyoung.u.qiniudn.com/gson-formate-plugins-previem.gif)
+
+
 
 [slide]
 
@@ -1076,7 +1095,11 @@ Emacs 用户肯定知道是干嘛的！！
 
 <br />
 
-所谓 AceJump，就是你按快捷键进入 AceJump 模式后（默认是 Ctrl+J），再按任一个字符，插件就会在屏幕中这个字符的所有出现位置都打上标签，你只要再按一下标签的字符，就能把光标移到该位置上。换言之，你要移动光标时，眼睛一直看着目标位置就行了，根本不用管光标的当前位置，非常舒服。 {:&.fadeIn}
+所谓 AceJump，就是你按快捷键进入 AceJump 模式后（默认是 Ctrl+;），再按任一个字符，插件就会在屏幕中这个字符的所有出现位置都打上标签，你只要再按一下标签的字符，就能把光标移到该位置上。换言之，你要移动光标时，眼睛一直看着目标位置就行了，根本不用管光标的当前位置，非常舒服。 {:&.fadeIn}
+
+[slide]
+
+![](http://veryyoung.u.qiniudn.com/20151214211336.png)
 
 [slide]
 
