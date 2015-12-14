@@ -935,6 +935,14 @@ VI(编辑器之神) 和 Emacs(神的编辑器) 入门成本有点高，但慢慢
 
 [slide]
 
+![](http://veryyoung.u.qiniudn.com/20151214205422.png)
+
+[slide]
+
+![](http://veryyoung.u.qiniudn.com/20151214205502.png)
+
+[slide]
+
 ##[IDEA](https://www.jetbrains.com/idea/)
 
 <br/>
