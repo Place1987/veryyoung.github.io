@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Travis CI：新一带持续集成工具
+title: Travis CI：新一代持续集成工具
 date: 2015-12-28 23:06:11
 author: VERYYOUNG
 comments: true
