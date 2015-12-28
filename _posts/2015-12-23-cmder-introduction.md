@@ -33,7 +33,7 @@ Linux 和 Mac 用户请自动忽略 ~~~~
 
 Windows 自带的命令行是非常弱的， ls、ssh、ps、grep、VIM  之类特别常用的命令都没有。
 
-cmder 提供了很多常用的 Linux 命令，同时也提供了很多增强功能。
+cmder 提供了很多常用的 Linux 命令（其实是基于 git 和 cygwin ），同时也提供了很多增强功能。
 
 比如新开 tab、分屏。
 
@@ -44,6 +44,7 @@ linux 下 bash 的快捷键大多都可以使用, 比如 清屏 ctrl + l, ctrl +
 ![](http://veryyoung.u.qiniudn.com/cmder-main.jpg)
 
 ![](http://veryyoung.u.qiniudn.com/20151213133203.png)
+
 
 
 
