@@ -4,7 +4,7 @@ title: ngrok：将本地服务暴露到外网
 date: 2016-1-6 22:50:09
 author: VERYYOUNG
 comments: true
-categories: [Http ]
+categories: [Http]
 ---
 
 ngrok 可以将本地服务暴露到外网，解决了路由穿透， 80 端口封锁之类的问题。
