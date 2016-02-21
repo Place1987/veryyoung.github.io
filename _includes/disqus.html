@@ -1,19 +1,6 @@
-<button id="load-disqus">
-    Load Comments
-</button>
-
-
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-
-$('#load-disqus').click(function(){
 	var disqus_shortname = 'veryyoungyoung';
-	$.ajaxSetup({async:true});
-	$.getScript(
-        'http://' + disqus_shortname + '.disqus.com/embed.js',
-        function(){
-        	$('#load-disqus').remove()
-        }
-    );
-})
+	// $.ajaxSetup({async:true});
+	$.getScript('http://' + disqus_shortname + '.disqus.com/embed.js');
 </script>
