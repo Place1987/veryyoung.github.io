@@ -16,7 +16,7 @@ Ant 和 Maven 越来越不够用了， Gradle 是一个比较完美的替代品�
 
 ----------
 
-##Ant
+## Ant
 
 现在我们用的构建工具主要是 Maven，其实在 Maven 之前还有一种东东，叫 Ant。
 
@@ -28,7 +28,7 @@ Ant 非常的灵活，你可以在 build.xml 里面编写任何你想要的东�
 
 这个其实就有点“[约定优于配置](https://zh.wikipedia.org/wiki/%E7%BA%A6%E5%AE%9A%E4%BC%98%E4%BA%8E%E9%85%8D%E7%BD%AE)” 的意思了。
 
-##约定优于配置
+## 约定优于配置
 
 约定优于配置（convention over configuration），也称作按约定编程，是一种软件设计范式，旨在减少软件开发人员需做决定的数量，获得简单的好处，而又不失灵活性。
 
@@ -42,7 +42,7 @@ Ant 非常的灵活，你可以在 build.xml 里面编写任何你想要的东�
 
 用 Java 做 Web 开发要学一堆的开源框架，Ruby 一个 Ruby On Rails 全部搞定！
 
-##Maven
+## Maven
 
 把话题扯回到构建工具。
 
@@ -54,7 +54,7 @@ Maven 的整合这一概念，为项目提供合理的默认行为。
 
 Maven 很快席卷 Java 圈，几乎成了 Java Web 的标准构建工具了。
 
-##更加复杂的 task
+## 更加复杂的 task
 
 
 然而每个项目都有自己的特定需求，标准做法必然是无法满足的。
@@ -65,7 +65,7 @@ Maven 很快席卷 Java 圈，几乎成了 Java Web 的标准构建工具了。
 
 Gradle 能完美的解决 Ant 和 Maven 带来的这些痛点。
 
-##Gradle
+## Gradle
 
 Gradle 是其是结合了 Maven 和 Ant 双方优点的一种基于 Groovy DSL 的新式项目构建工具。而且由于是基于 Groovy 语言，所以语法上要比基于 XML 的 Maven 和 Ant 简洁许多，并且功能更加强大。 
 
@@ -117,7 +117,7 @@ Gradle 可以自定义任务
 
 Gradle 基于 Groovy 语言，你可以用 Groovy 去实现一系列复杂的操作，来代替掉 println "hello world" 。
 
-##使用现状
+## 使用现状
 
 Android 项目管理方面 Gradle 占有统治性地位，Android 新建项目已默认用 Gradle 管理了。
 

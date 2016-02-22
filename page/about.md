@@ -5,7 +5,7 @@ comments: true
 ---
 
 
-##About
+## About
 
 I'm veryyoung， 来自湖北的一个小城市: 天门。
 
@@ -23,7 +23,7 @@ I'm veryyoung， 来自湖北的一个小城市: 天门。
 
 ------
 
-##Coding
+## Coding
 
 主要使用语言是 Java，也用过一点 Groovy、PHP、Python、Shell。
 
@@ -42,15 +42,6 @@ I'm veryyoung， 来自湖北的一个小城市: 天门。
 认为技术能改变世界。
 
 ------
-
-##Others
-
-目前在搜狗工作还算开心，没有换工作的意愿。
-
-希望各位HR和猎头们别浪费自己宝贵的时间啦！
-
-
-
 
 
 

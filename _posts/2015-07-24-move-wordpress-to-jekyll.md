@@ -6,7 +6,7 @@ author: VERYYOUNG
 comments: true
 categories: [Blog]
 ---
-#把WordPress迁移到Jekyll
+# 把WordPress迁移到Jekyll
 
 早就无法忍受WordPress蜗牛般的反应速度了，抽时间狠狠心给它迁移到Gitpages了，骄傲的使用了Jekyll。可以使用github管理文章，免费无流量限制，最重要的是可以用Markdown哦！
 

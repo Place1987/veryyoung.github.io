@@ -20,23 +20,23 @@ categories: [Java]
 
 下面提几点常用的设置和插件。
 
-###设置
+### 设置
 
-####1.安装主题。
+#### 1.安装主题。
 
 [http://www.ideacolorthemes.org/](http://www.ideacolorthemes.org/) 上很有多很好看的 IDEA 主题，可以选择自己喜欢的下载下来，然后 File -> Import Settings ，马上大变样，好看极了，保证你再也不想看 Eclipse 那种上个世纪的丑样了！！
 
-####2.显示行号.
+#### 2.显示行号.
 
 Settings->Editor->Appearance 标签项，勾选Show line numbers
 
-####3.快捷键设置
+#### 3.快捷键设置
 
 Settings->KeyMap ，可以随意自定义各种快捷键
 
 墙裂推荐一个快捷键“Double shift”，可以搜索任何你想要的东西!
 
-####4.插件
+#### 4.插件
 
 Settings->Plugins ，搜索你想安装的插件就能在线安装了，比 Eclipse 安装插件要方便许多！
 下面是一些常见的插件。

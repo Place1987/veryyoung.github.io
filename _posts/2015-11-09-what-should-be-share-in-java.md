@@ -17,7 +17,7 @@ Java 最强大的就是其丰富的解决方案。
 
 ----------
 
-##1.	[Apache Commons](https://commons.apache.org/)
+## 1.	[Apache Commons](https://commons.apache.org/)
 
 
 Apache Commons 我们或多或少用过一点，比如 StringUtils.isEmpty、CollectionUtils.isEmpty().
@@ -43,7 +43,7 @@ Apache Commons 封装了一些常用的工具类，减少重复操作，比如�
 非常好用，值得系统的学一遍。
 
 
-##2.	[Guava](https://code.google.com/p/guava-libraries/)
+## 2.	[Guava](https://code.google.com/p/guava-libraries/)
 
 Guava 是 Google 出品的第三方工具库，功能和 Apache Commons 有点类似。
 
@@ -54,7 +54,7 @@ Guava 做了很多数据结构的增强，比如不可变集合、多项映射�
 [并发编程网](http://ifeve.com/) 有个不错的中文版教程: [Google Guava官方教程（中文版）](http://ifeve.com/google-guava/)
 
 
-##3.	[javatuples](http://www.javatuples.org/)
+## 3.	[javatuples](http://www.javatuples.org/)
 
 编程过程中经常会遇到多个返回值的问题，通常返回一个 Array、集合（List、Set、Map）或自定义一个 Class。
 
@@ -76,7 +76,7 @@ javatuples 是一个很简单的 lib，它没有什么华丽的功能，就是�
 
  
 
-##4.	[OkHttp](https://github.com/square/okhttp)
+## 4.	[OkHttp](https://github.com/square/okhttp)
 
 HttpClient 用起来挺麻烦的，语法啰嗦，拿到手肯定得自己再封装一次，而且一堆废弃的 api， not happy....
 
@@ -112,7 +112,7 @@ OkHttp 是 HttpClient 的一个成熟的替代品！
 
 Android 在慢慢的废弃 HttpClient，终于在 6.0 把 HttpClient 完全删掉了。
 
-##5.	[jsoup](http://jsoup.org/)
+## 5.	[jsoup](http://jsoup.org/)
 
 jsoup 是一款 Java 的 HTML 解析器，可直接解析某个 URL 地址的 HTML 文本内容。
 
@@ -127,7 +127,7 @@ jsoup 也可以 set httpHeader 等。
 可以做比较轻量级的爬虫。
 
 
-##6.	[fastjson](https://github.com/alibaba/fastjson)
+## 6.	[fastjson](https://github.com/alibaba/fastjson)
 
 fastjson 是一个 Java 语言编写的高性能功能完善的 json 解析库，号称史上最快的 jackson，来自阿里巴巴。
 
@@ -142,7 +142,7 @@ fastjson 是一个 Java 语言编写的高性能功能完善的 json 解析库�
 	user = JSON.parseObject(jsonString, User.class);
 	
 
-##7.	[Mockito](http://mockito.org/)
+## 7.	[Mockito](http://mockito.org/)
 
 Mockito 是一个流行的 Mocking 框架。
 
@@ -164,7 +164,7 @@ Mockito 是一个流行的 Mocking 框架。
 	when(list.get(1)).thenThrow(new RuntimeException("test excpetion"));  
 
 
-##8.	[Logback](http://logback.qos.ch/)
+## 8.	[Logback](http://logback.qos.ch/)
 
 Logback 是由 log4j 创始人设计的又一个开源日志组件, 用来替换掉 log4j。
 
@@ -182,7 +182,7 @@ Logback 是由 log4j 创始人设计的又一个开源日志组件, 用来替换
 Logback 一般与日志门面框架 [SLF4J](http://www.slf4j.org/) 配合使用。
 	
 
-##9.	[Joda](http://www.joda.org/joda-time/)
+## 9.	[Joda](http://www.joda.org/joda-time/)
 
 Java 自带的时间工具 java.util.Calendar、java.util.Date 非常别扭，一个很简单的功能都要写很多很行代码，还得异常处理。
 
@@ -215,7 +215,7 @@ Joda 还提供了
 Java8 已经引进了 Joda 的思想增强了 Java 时间库，然而大部分项目都没有升到 Java8。
 
 
-##10.	[Lombok](https://projectlombok.org/)
+## 10.	[Lombok](https://projectlombok.org/)
 
 Java 程序员比较烦的一件事情之一就是要写大量的样板代码。
 
@@ -227,7 +227,7 @@ Lombok 就能比较优雅的解决掉这个烦恼！
 
 详情请参考 [使用 Lombok 来缩减 Java 代码](/blog/2015/10/08/use-lombok-to-reduce-your-java-code.html)
 
-##11 [Druid](https://github.com/alibaba/druid)
+## 11 [Druid](https://github.com/alibaba/druid)
 
 >Druid 是Java语言中最好的数据库连接池。Druid能够提供强大的监控和扩展功能。
 
@@ -243,7 +243,7 @@ Druid 内置提供了用于监控的 StatFilter、日志输出的 Log 系列 Fil
 
 
 
-##12 [Dubbo](http://dubbo.io/)
+## 12 [Dubbo](http://dubbo.io/)
 
 Dubbo 是一个阿里巴巴开源出来的一个分布式服务框架，致力于提供高性能和透明化的 RPC 远程服务调用方案，以及 SOA 服务治理方案。
 
@@ -269,7 +269,7 @@ Dubbo 支持各种常用的协议，如 Thrift、RMI、Hessian、WebService 等�
 比我们内部自己写的 SOA 使用起来会简单不少。
 
 
-##13 [Spring Boot](http://projects.spring.io/spring-boot/)
+## 13 [Spring Boot](http://projects.spring.io/spring-boot/)
 
 Spring Boot 是一个微框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。
 
@@ -277,7 +277,7 @@ Spring Boot 是一个微框架，其设计目的是用来简化 Spring 应用的
 
 Spring 平台饱受非议的一点就是大量的 XML 配置以及复杂的依赖管理，Spring Boot 可以做到 0 xml，同时 pom 文件也可以极大化的减小。
 
-##14 [JFinal](http://www.jfinal.com/)
+## 14 [JFinal](http://www.jfinal.com/)
 
 JFinal 是基于 Java 语言的极速 WEB + ORM 框架，其核心设计目标是开发迅速、代码量少、学习简单、功能强大、轻量级、易扩展、Restful。 
 

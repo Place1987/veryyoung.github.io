@@ -14,12 +14,12 @@ categories: [Others]
 
 ----------
 
-##申请认证
+## 申请认证
 
 这步省略，自己对着流程走就行了，走完之后微信会给你发生一份邮件。
 
 
-##得到各种 key
+## 得到各种 key
 
 申请通过之后收到的邮件中会有一份如下图的材料
 
@@ -33,7 +33,7 @@ categories: [Others]
 
 **噩梦正式开始！！**
 
-##统一下单
+## 统一下单
 支付之前必须得先下单，得调用微信的 [统一下单](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1) 接口，注意，用 JSAPI 的订单一定要带上 openId，至于 openId 怎么获得可以参考[OpenID的获取指引](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_4)。
 
 
@@ -45,12 +45,12 @@ categories: [Others]
 
 
 
-##微信JS-SDK
+## 微信JS-SDK
 
 既然是微信内的 html5 应用，那应该得用[微信JS-SDK](https://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html)吧！
 
 
-###config
+### config
 
 按照官方说的，先 config
 
@@ -67,7 +67,7 @@ categories: [Others]
 
 找了半天，发现我后端返回的 json 解析不正常，OK，正常配置后，不报错了！
 
-###发起一个微信支付请求
+### 发起一个微信支付请求
 
     wx.chooseWXPay({
         timestamp: 0, // 支付签名时间戳，注意微信jssdk中的所有使用timestamp字段均为小写。但最新版的支付后台生成签名使用的timeStamp字段名需大写其中的S字符
