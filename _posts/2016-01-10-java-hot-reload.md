@@ -17,7 +17,7 @@ Java 程序员最幸福的事情是可以在等程序编译的时候泡 Java！�
 
 ----------
 
-#热部署的方案
+# 热部署的方案
 
 
 1.	Tomcat Reload 
@@ -26,7 +26,7 @@ Java 程序员最幸福的事情是可以在等程序编译的时候泡 Java！�
 4.	Jetty
 5.	Jrebel
 
-##Tomcat Reload
+## Tomcat Reload
 
 
 修改 tomcat 的配置文件 server.xml 的 Host 配置，加上 reloadable="true"。
@@ -34,14 +34,14 @@ Java 程序员最幸福的事情是可以在等程序编译的时候泡 Java！�
 缺点：只能热部署静态文件，修改 Java 或配置会自动重启 server，效率低下，还容易造成内存溢出、 class 找不到等 bug。 
 
 
-##Eclipse Debug 模式
+## Eclipse Debug 模式
 
 Eclipse debug 模式修改完 Java 代码会自动重启 server。
 
 缺点同上~
 
 
-##IDEA Reload
+## IDEA Reload
 
 IDEA 在 debug 模式下设置失去焦点更新资源和 classes 
 
@@ -50,21 +50,21 @@ IDEA 在 debug 模式下设置失去焦点更新资源和 classes
 缺点：只支持静态文件、Java 现有方法的更改，新增 Java 方法、类，或者改变 SpringMVC 的 RequestMapping、Spring 配置等都不会生效。 
 
 
-##Jetty
+## Jetty
 Jetty 会监听生成的 build 目录，遇到文件更新会自动替换掉。
 
 但并不能监听源码的变更。
 
 
 
-###基于Gradle 的解决方案
+### 基于Gradle 的解决方案
 
 1.	Gradle Watch 
 2.	Gretty
 3.	Continuous Build
 
 
-####[Gradle Watch](https://github.com/bluepapa32/gradle-watch-plugin)
+#### [Gradle Watch](https://github.com/bluepapa32/gradle-watch-plugin)
 
 gradle watch 的作用是监听某种类型的文件的变化，包括添加，删除和修改，然后执行预定义的任务。
 
@@ -110,7 +110,7 @@ gradle watch 的作用是监听某种类型的文件的变化，包括添加，�
 3.	不支持 Jetty
 
 
-##[Jrebel](http://zeroturnaround.com/software/jrebel/)
+## [Jrebel](http://zeroturnaround.com/software/jrebel/)
 
 >Reload Code Changes Instantly
  
