@@ -8,7 +8,7 @@ comments: true
 
 
 
-##Links
+## Links
 
 - [Daisydan](https://dandanzhou.github.io/)
 
@@ -24,7 +24,7 @@ comments: true
 
 ------
 
-##From My Blog
+## From My Blog
 
 - [IDEA常用配制和插件](/blog/2015/07/17/idea-common-config-and-plugins.html)
 
