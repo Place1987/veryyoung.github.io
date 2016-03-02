@@ -60,9 +60,9 @@ categories: [Others]
         if (StringUtils.isEmpty(ua)) {
             return false;
         }
-        if (ua.contains("Baidu") || ua.contains("Google") || ua.contains("Yahoo") || ua.contains("Sogou")
-                || ua.contains("360") || ua.contains("bing") || ua.contains("Soso") || ua.contains("Youdao")
-                || ua.contains("Easou")) {
+        if (ua.contains("Baiduspider") || ua.contains("Googlebot") || ua.contains("Yahoo! Slurp")
+                || ua.contains("Sogou web spider") || ua.contains("360Spider") || ua.contains("bingbot")
+                || ua.contains("Sosospider") || ua.contains("YoudaoBot") || ua.contains("EasouSpider")) {
             return true;
         }
         return false;
@@ -113,7 +113,7 @@ PhantomJS 是基于命令行的工具，需要用后端语言来调用命令行�
 
 在执行请求执行设定
 
-    phantom.outputEncoding = "gb2312";
+    phantom.outputEncoding = "ut-8";
     
 问题解决！
 
