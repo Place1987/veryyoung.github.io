@@ -59,7 +59,7 @@ $(document).ready(function() {
     
     var disqus_shortname = 'veryyoung';
     $.ajaxSetup({ cache: true });
-    $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js');
+    $.getScript('https://' + disqus_shortname + '.disqus.com/embed.js');
 
 });
 
