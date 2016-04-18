@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jenkins 后台进程
-date: 2016-4-18 23:55:18
+date: 2016-4-19
 author: VERYYOUNG
 comments: true
 categories: [Linux]
