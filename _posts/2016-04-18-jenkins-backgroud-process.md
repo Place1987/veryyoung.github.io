@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Jenkins 后台进程
-date: 2016-04-18 22:54:11
+date: 2016-4-18 23:55:18
 author: VERYYOUNG
 comments: true
-categories: [Others]
+categories: [Linux]
 ---
 
 今天在配置 Jenkins Job 的时候，after `mvn package` 用命令行 `nohup java -jar project-1.0-SNAPSHOT.jar > server.log 2>&1  &
