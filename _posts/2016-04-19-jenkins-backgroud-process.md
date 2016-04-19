@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Jenkins 后台进程
-date: 2016-4-19
+category: [Others]
+date: 2016-04-19
 author: VERYYOUNG
 comments: true
-categories: [Linux]
 ---
+
 
 今天在配置 Jenkins Job 的时候，after `mvn package` 用命令行 `nohup java -jar project-1.0-SNAPSHOT.jar > server.log 2>&1  &
 ` 起一个 spring-boot 项目，死活不生效。
@@ -38,8 +39,3 @@ This can be done as a parameter to the "java" binary when starting Jenkins:
 1.  启动 Jenkins 的时候加上 `-Dhudson.util.ProcessTree.disable=true`，也就是 `java -Dhudson.util.ProcessTree.disable=true -jar jenkins.war`
 2.  在后台进程前加上 `BUILD_ID=dontKillMe`, 也就是 `BUILD_ID=dontKillMe 
 nohup java -jar project-1.0-SNAPSHOT.jar > server.log 2>&1  &`
-
-
-
-
-
