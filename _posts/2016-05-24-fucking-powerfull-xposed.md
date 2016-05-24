@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 屌炸天的 Xposed 框架
-category: [Others]
+category: [Android]
 date: 2016-05-24
 author: VERYYOUNG
 comments: true
@@ -24,7 +24,7 @@ comments: true
 
 我擦，这不是 AOP 吗？哈哈~
 
-Xposed 可以拦截 method，然后在方法执行前或方法执行后做一些事情，甚至去阻止 method 的执行。
+Xposed 可以拦截 method，然后在方法执行前或方法执行后做一些事情，甚至去阻止 method 的执行，基于这个原理甚至可以修改手机的串号、定位，等等各种信息。
 
 
 ### 说说 Xposed 插件开发流程
@@ -108,7 +108,8 @@ public class Main implements IXposedHookLoadPackage {
 
 1.  hook 到 method 之后，你可以利用 LoadPackageParam 的 classLoader 去加载 app 里面的各种类，通过反射去取各种值，调用各种方法，太厉害了有米有？！！！
 2.  代码每次改完必须重启Android 手机
-3.  必须 Root，且安装 Xposed 框架，有变砖风险哦。
+3.  找到切人点，得依靠 Android 反编译的技术，这个说来可话长了。。
+4.  必须 Root，且安装 Xposed 框架，有变砖风险哦。
 
 
 ### Some Examples
