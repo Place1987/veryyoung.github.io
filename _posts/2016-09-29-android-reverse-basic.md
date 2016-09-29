@@ -118,7 +118,7 @@ Mac 的 finder 自带 merge 文件夹功能。在拖拽文件夹到目标时按�
 
 Xposed 可以让 Android 平台发挥出最强性能，能在不改变 apk 本身的情况下，改变 apk 的行为。 
 
-关于 Xposed 的详细介绍可以参考 [屌炸天的 Xposed 框架](/blog/2016/05/24/fucking-powerfull-xposed.html)。
+关于 Xposed 的详细介绍可以参考 [屌炸天的 Xposed 框架](/blog/2016/09/24/fucking-powerfull-xposed.html)。
 
 
 -------
