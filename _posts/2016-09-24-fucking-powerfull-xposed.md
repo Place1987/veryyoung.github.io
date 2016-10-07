@@ -66,7 +66,6 @@ Xposed 可以拦截 method，然后在方法执行前或方法执行后做一些
 
 
 ```java
-
 public class Main implements IXposedHookLoadPackage {
 
     private static final String DINGDING_PACKAGE_NAME = "com.alibaba.android.rimet";
@@ -90,7 +89,6 @@ public class Main implements IXposedHookLoadPackage {
         }
     }
 }
-
 ```
 
 这个意思是，拦截钉钉的 ```com.alibaba.wukong.im.message.MessageImpl``` 类下的 ```recallStatus``` 方法，然后把返回结果设置为 0。
