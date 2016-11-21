@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 《持续集成》读书笔记
-category: [Database]
+category: [CD]
 date: 2016-11-20
 author: VERYYOUNG
 comments: true
@@ -36,7 +36,7 @@ CI 能让我们注意到趋势并进行有效的决策。比如利用 CI，我�
 有效的 CI 能随着每一次“绿色”的构建，给产品开发人员带来极大的信心增强。团队人员能知道代码满足了规范标准，能按照预期运行，能马上发布。
 
 
-## 持续交付的流程
+## 持续集成的流程
 
 下图是 CI 的大概流程
 
