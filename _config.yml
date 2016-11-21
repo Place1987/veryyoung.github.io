@@ -8,8 +8,8 @@ gems: [jekyll-paginate]
 
 blog:
     name:         VERYYOUNG                                         # 博客名称
-    description:  I'm veryyoung                                     # 博客描述
-    title:        I'm veryyoung                                     # 网页标题
+    description:  永远年轻，永远探索！                                 # 博客描述
+    title:        永远年轻，永远探索！                  # 网页标题
     url:          http://veryyoung.me                               # 博客地址
     duoshuo:      veryyoung                                         # 多说ID
 author:

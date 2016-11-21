@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《持续》读书笔记
+title: 《持续交付》读书笔记
 category: [CD]
 date: 2016-11-21
 author: VERYYOUNG
