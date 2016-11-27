@@ -7,7 +7,7 @@ author: VERYYOUNG
 comments: true
 ---
 
-[上篇文章](/blog/2016/11/23/continuous-delivery-reading-note.html)提到了持续交付，使用持续交付好处诸多，这里就不说了。
+[上篇文章](/blog/2016/11/21/continuous-delivery-reading-note.html)提到了持续交付，使用持续交付好处诸多，这里就不说了。
 
 其实在之前工作过程中，也尝试过 Jenkins 来做持续集成，但基本只用作自动打包，其他过程基本是 ssh 到服务器上进行人肉操作，或者完全交给 op 处理。
 
