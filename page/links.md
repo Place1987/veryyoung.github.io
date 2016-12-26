@@ -41,4 +41,4 @@ comments: true
 
 
 
-{% include disqus.html %}
+{% include duoshuo.html %}

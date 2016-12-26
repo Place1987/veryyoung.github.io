@@ -47,4 +47,4 @@ I'm veryyoung， 来自湖北的一个小城市: 天门。
 
 
 
-{% include disqus.html %}
+{% include duoshuo.html %}
